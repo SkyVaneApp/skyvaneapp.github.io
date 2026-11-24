@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DogWalkPlanner — Datenschutzerklärung</title>
+<style>
+  :root { --bg:#fff; --fg:#14231f; --dim:#5a6a66; --line:#e1e8e6; --panel:#f3f7f6; --link:#2b8a3e; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1510; --fg:#e3f0e6; --dim:#8aa092; --line:#1c2a22; --panel:#111f17; --link:#5fd17a; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 860px; margin: 0 auto; padding: 40px 20px 64px; background: var(--bg); color: var(--fg); }
+  a { color: var(--link); } h1 { font-size: 2rem; margin: 0 0 .2em; } h2 { font-size: 1.15rem; margin: 2em 0 .6em; }
+  .lede { font-size: 1.15rem; color: var(--dim); } .meta { color: var(--dim); font-size: .9rem; }
+  .shots { display: grid; gap: 14px; grid-template-columns: 1fr 1fr 1fr; margin: 1.6em 0; }
+  img { width: 100%; border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; } th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; } th { background: var(--panel); }
+</style>
+</head>
+<body>
+<p><a href="https://skyvane.app/dogwalkplanner-app/">← DogWalkPlanner</a></p>
+<h1>Datenschutzerklärung — DogWalkPlanner</h1>
+<p class="meta">Stand: 8. November 2026 · Version 0.13.0</p>
+
+<p>DogWalkPlanner plant Rundwege zum Gassigehen und zeichnet sie auf Wunsch auf. Es gibt kein Konto, keine Anmeldung,
+keine Werbung, keine Analyse und keinen Server dieses Projekts.</p>
+
+<h2>Was auf deinen Geräten bleibt</h2>
+<p>Deine Gänge — Strecke, schöne Orte, Pausen, Bewertung, Notiz, Name — liegen auf deinem iPhone und, wenn ein
+iCloud-Konto angemeldet ist, in <strong>deiner privaten iCloud</strong> (CloudKit), damit sie auf deinen anderen Geräten
+erscheinen. Diese Daten sind für uns nicht einsehbar. Die Heatmap wird auf dem Gerät aus deinen Gängen berechnet.
+Die Apple Watch bekommt den laufenden Gang direkt vom iPhone. Löschst du die App, sind die Daten auf dem Gerät weg;
+was in deiner iCloud liegt, löschst du über die iCloud-Einstellungen.</p>
+
+<h2>Standort</h2>
+<p>Die App nutzt deinen Standort, um Rundwege ab dort zu planen, und während eines Gangs, um Strecke, Tempo und die
+schönen Orte aufzuzeichnen, die du merkst, — auch bei gesperrtem Telefon, nur zwischen „Loslaufen“ und „Ende“.
+Ein vergessener Gang endet nach 30 Minuten ohne Bewegung von selbst.</p>
+
+<h2>Welche Dienste dein Gerät fragt</h2>
+<p>Diese Anfragen gehen direkt von deinem Gerät an den Anbieter, ohne Konto und ohne Kennung, aber mit deiner IP-Adresse.</p>
+<table>
+<tr><th>Dienst</th><th>Wozu</th><th>Was er erfährt</th></tr>
+<tr><td>Bright Sky (Daten des Deutschen Wetterdienstes)</td><td>Regenradar und Vorhersage</td><td>Die Gegend der Runde, auf rund 1 km gerundet</td></tr>
+<tr><td>OpenFreeMap</td><td>Kartenkacheln für Grünflächen, Wegenetz, Unterstände, Parkplätze, Mülleimer — die Wege rechnet die App daraus auf dem Gerät</td><td>Die Kacheln der Gegend (je rund 2,4 km)</td></tr>
+<tr><td>Apple Karten</td><td>Kartendarstellung, Ortssuche, Fußwege nur dort, wo das Wegenetz nicht reicht</td><td>Start und Wegpunkte der Runde, eingegebene Suchbegriffe</td></tr>
+</table>
+
+<h2>Weitere Rechte</h2>
+<p><strong>Fotos:</strong> nur Hinzufügen, wenn du ein Bild eines Gangs beim Teilen sichern willst; die App liest keine Fotos.
+<strong>Mitteilungen:</strong> für den Gassi-Wecker, auf dem Gerät geplant. <strong>Feedback</strong> per Mail schickst du selbst ab.</p>
+
+<h2>Verantwortlich und Kontakt</h2>
+<p>DogWalkPlanner (Privatperson, Deutschland) · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+<p class="meta">© AK</p>
+<h2 lang="en">Summary in English</h2>
+<p lang="en">No account, no ads, no analytics, no server of this project. Walks stay on your device and in your private iCloud. Your device asks Bright Sky (German Weather Service data) with the area rounded to about 1 km, OpenFreeMap for map tiles of the area, and Apple Maps for the map, search and – where the path network falls short – directions. Contact: <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

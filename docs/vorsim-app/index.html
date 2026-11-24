@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOR Sim — a VOR and NDB radio navigation trainer for iPhone and iPad</title>
+<meta name="description" content="Fly the needles, not a menu. Radial intercepts, TO/FROM, ADF and RMI bearings and holding entries, on real instruments over real navaids.">
+<style>
+  :root { --bg:#fff; --fg:#1a1a2e; --dim:#5a6076; --line:#e2e4ee; --panel:#f5f6fa; --link:#1b62c8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b0f1e; --fg:#dfe6ff; --dim:#8892b0; --line:#1e2740; --panel:#111830; --link:#6fb3ff; }
+  }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 860px;
+         margin: 0 auto; padding: 40px 20px 64px; background: var(--bg); color: var(--fg); }
+  a { color: var(--link); }
+  h1 { font-size: 2rem; margin: 0 0 .2em; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 2.2em 0 .6em; }
+  .lede { font-size: 1.15rem; color: var(--dim); margin: 0 0 1.4em; }
+  .meta { color: var(--dim); font-size: .9rem; }
+  .shots { display: grid; gap: 14px; grid-template-columns: 1fr; margin: 1.6em 0; }
+  @media (min-width: 640px) { .shots { grid-template-columns: 1fr 1fr; } }
+  figure { margin: 0; }
+  figure img { width: 100%; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; display: block; }
+  figcaption { color: var(--dim); font-size: .9rem; margin-top: .4em; }
+  ul { padding-left: 1.15em; }
+  li { margin: .35em 0; }
+  .cols { display: grid; gap: 0 32px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+  .note { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+          padding: 14px 18px; margin: 1.6em 0; }
+  footer { border-top: 1px solid var(--line); margin-top: 3em; padding-top: 1.2em;
+           color: var(--dim); font-size: .9rem; }
+  code { background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>VOR Sim</h1>
+<p class="lede">A VOR and NDB radio navigation trainer for iPhone and iPad.
+Fly the needles, not a menu.</p>
+
+<p>Radio navigation clicks when you fly it, not when you read about it. VOR Sim
+puts a light flight model behind a full six-pack panel, a moving map, a
+synthetic outside view and a GNS 430-style GPS, so the needles stay the thing
+you have to concentrate on. Nothing to configure, no aircraft to buy, no
+scenery to download: press START and intercept something.</p>
+
+<div class="shots">
+  <figure>
+    <img src="shots/panel.jpg" alt="The instrument panel beside the moving map: six gauges, a VOR head, an HSI and a twin-needle ADF.">
+    <figcaption>Six instruments, two VORs, two NDBs and a chart.</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/map.jpg" alt="Full-screen moving map with radials drawn through the stations, the aircraft track and airspace.">
+    <figcaption>Real navaids. Drag them, tune them, intercept them.</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/instruments.jpg" alt="The panel alone, gauges at full size.">
+    <figcaption>A twin-needle ADF with a card you can slave, set or fix.</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/cockpit.jpg" alt="The synthetic view over the cowling, banked, with the panel alongside.">
+    <figcaption>Look up from the panel when you want to.</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/glass.jpg" alt="The same window with the nose taken away and a horizon, pitch ladder, bank scale and boxed speed, height and climb painted on it.">
+    <figcaption>Or take the nose away and fly the glass.</figcaption>
+  </figure>
+</div>
+
+<div class="cols">
+<div>
+<h2>The panel</h2>
+<ul>
+  <li>Classic VOR head (NAV1) with a rotatable OBS ring, CDI and TO/FROM flag</li>
+  <li>HSI (NAV2) with course needle, deviation bar, heading bug and an ADF pointer</li>
+  <li>Twin-needle ADF — tune two NDBs and cross their bearings for a fix</li>
+  <li>The ADF card is fixed, slaved to the compass (RMI) or set by hand — turn
+      its knob, or just drag the card round by its rim</li>
+  <li>A directional gyro that precesses about 10° in 15 minutes and has to be reset</li>
+  <li>Airspeed with an RPM sub-dial, attitude, altimeter with hPa subscale, VSI
+      and turn coordinator</li>
+  <li>Spread two fingers and the nav heads take the whole screen — on a phone,
+      the only way to read half a dot</li>
+  <li>The row of switches under the panel decides which heads are up: V2 steps
+      HSI → plain second VOR head → off, ADF two needles → one → off</li>
+</ul>
+
+<h2>Real navaids</h2>
+<ul>
+  <li>About 17 000 airports and 10 000 VOR and NDB stations, bundled and
+      offline. Positions, idents, frequencies and runway directions are real</li>
+  <li>Long press a VOR to tune it on NAV1 then NAV2; an NDB goes to the first
+      ADF needle, then the second</li>
+  <li>Long press an airport to fly direct to it</li>
+  <li>A reset deals a fresh exercise; switch on "Reset moves you somewhere new"
+      and it deals a fresh place too — a real aerodrome anywhere in the world
+      with real VORs in range of it</li>
+</ul>
+</div>
+
+<div>
+<h2>The map</h2>
+<ul>
+  <li>Your aircraft, its breadcrumb trail and every station, all draggable —
+      build an intercept in seconds and drag the aeroplane back to fly it again</li>
+  <li>The selected OBS course drawn through each VOR, with TO/FROM arrows and
+      radial numbers pinned to the screen edge</li>
+  <li>A second press takes the ground away and leaves the stations, radials,
+      track and airspace on black, which is how a radial reads easiest</li>
+</ul>
+
+<h2>Flying it</h2>
+<ul>
+  <li>Tilt the device like a yoke — tilt is elevator, rotate is ailerons — or
+      use the on-screen stick, rudder and throttle. Hardware keyboards work too</li>
+  <li>Controls are damped the way an aeroplane is: an input arrives over about
+      a second, and the turn builds after it</li>
+  <li>A turn costs: 1.4 g at 45° of bank. Either the nose falls or the speed
+      goes. The wing stalls at 46 kt, and with aileron on it spins</li>
+  <li>Engine sound synthesised from the rpm, wind with gusts, 1–4× time
+      compression, and a stopwatch for timing a hold</li>
+</ul>
+</div>
+</div>
+
+<h2>Out of the window</h2>
+<p>The cockpit view has three settings. Look out over the cowling, which is the
+attitude reference in a real aeroplane — in level flight the horizon sits just
+above the nose, and where it sits is your pitch. Or switch to the glass panel:
+the nose goes, and a horizon, a pitch ladder every 10°, a bank scale and boxed
+speed, height and climb are painted on the window instead, so the view can be
+flown on its own. Or close it. The ground below is the real countryside, from
+the map.</p>
+
+<h2>GNS 430</h2>
+<p>Direct-To, a flight plan with automatic leg sequencing, OBS suspend, CDI
+source switching between GPS and VLOC, COM and NAV tuning, and any bundled
+ident typed in with a match list from the database.</p>
+
+<div class="note">
+<strong>Not for navigation.</strong> The airspace, and the VOR A / VOR B / NDB
+stations an exercise is flown against, are invented for training until you long
+press real ones on the map. Nothing in this app may be used for real
+navigation.
+</div>
+
+<h2 id="support">Support</h2>
+<p>Questions, bug reports and suggestions go to
+<a href="mailto:info@skyvane.app">info@skyvane.app</a>. Say which
+device and which version of the app you are on — the version is at the foot of
+the Help page inside the app — and what the needles were doing at the time.</p>
+<p>The training area centres on your position, or on EDAZ Schönhagen if you
+decline the location prompt. Nothing else is asked of you: see the
+<a href="https://skyvane.app/vorsim-privacy/">privacy policy</a>.</p>
+
+<h2>Privacy, in one line</h2>
+<p>No accounts, no analytics, no advertising, no third-party SDKs, and no data
+collected. One home airfield is remembered on your device; the map tiles come
+from Apple. The <a href="https://skyvane.app/vorsim-privacy/">full
+policy</a> spells it out.</p>
+
+<footer>
+<p>Made by a pilot, for pilots and for students working on the instrument
+rating.</p>
+<p>Airport and navaid data from <a href="https://ourairports.com/data/">OurAirports</a>,
+which is in the public domain. Map tiles and points of interest are Apple Maps.
+VOR Sim is not affiliated with or endorsed by Garmin; the GPS page is a
+training mock-up, not a Garmin product.</p>
+<p class="meta">© 2026 AK · <a href="https://skyvane.app/vorsim-privacy/">Privacy policy</a></p>
+</footer>
+
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CityPanorama — Berlins Skyline erkennen</title>
+<style>
+  :root { --ink:#13203a; --dim:#5d6678; --bg:#f6f4ef; --line:#dcd8cf; --accent:#1f5fae; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e6e1; --dim:#9aa3b2; --bg:#0d1220; --line:#252c3c; --accent:#6aa8ff; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: var(--ink); background: var(--bg); }
+  h1 { font-size: 1.7rem; margin: .2em 0; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  a { color: var(--accent); } .dim { color: var(--dim); }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; } th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+</style>
+<style>
+  .head { display: flex; gap: 18px; align-items: center; } .head img { width: 96px; height: 96px; border-radius: 22px; }
+  .shot { display: block; max-width: 300px; width: 100%; margin: 24px auto; border-radius: 28px; border: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="head">
+  <img src="icon.png" alt="">
+  <div><h1>CityPanorama</h1><div class="dim">Berlins Skyline erkennen · für iPhone und iPad</div></div>
+</div>
+
+<p>Was ist das für ein Turm dort hinten? CityPanorama zeichnet die Stadt so, wie du sie von deinem
+Standort aus siehst — als Linienbild der Skyline, mit Namen und Entfernung an jedem Wahrzeichen.
+Wie ein Gipfelfinder, nur für die Stadt.</p>
+
+<img class="shot" src="shot.png" alt="Die Skyline vom Viktoriapark mit dem Fernsehturm">
+
+<h2>Was die App kann</h2>
+<ul>
+  <li>Die Skyline in Blickrichtung, verdeckte Linien weggelassen; auf Wunsch über dem Kamerabild.</li>
+  <li>Fernsehturm, Funkturm und die bekanntesten Orte sind immer beschriftet, auch verdeckt — zum Ausrichten des Kompasses.</li>
+  <li>Wasser, Parks, Hauptstraßen und Bahn als farbige Linien auf dem Gelände.</li>
+  <li>Standort per GPS oder Tipp auf die Karte, Blickhöhe einstellbar.</li>
+  <li>Kein Konto, keine Werbung, keine Analytik; die Daten liegen in der App.</li>
+</ul>
+<p class="dim">Die Daten decken derzeit nur Berlin ab.</p>
+
+<h2 id="support">Support</h2>
+<p>Fragen, Fehler, Wünsche: <a href="mailto:info@skyvane.app">info@skyvane.app</a>.
+Hilfreich sind dein Standort (ungefähr reicht), die Blickrichtung und ein Bildschirmfoto.</p>
+<p><strong>Der Kompass liegt daneben?</strong> Zwischen Häusern lenken Stahl und Beton ihn ab. Richte
+das iPhone auf ein Wahrzeichen, das du siehst — etwa den Fernsehturm — und wische das Bild zur Seite,
+bis sein Name darüber steht. Der Ausgleich bleibt gespeichert; der Knopf mit dem Pfeil setzt ihn zurück.</p>
+<p><strong>Ein Gebäude fehlt?</strong> Gezeichnet wird, was in OpenStreetMap eine Höhe trägt. Wer die
+Höhe dort einträgt, sieht es mit der nächsten Datenfassung.</p>
+
+<h2>Datenschutz</h2>
+<p>Die App erhebt keine Daten. Einzelheiten in der <a href="https://skyvane.app/citypanorama-privacy/">Datenschutzerklärung</a>.</p>
+
+<h2>Quellen</h2>
+<p>Gebäude, Orte, Wasser, Parks, Straßen und Bahn © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> (ODbL).
+Gelände: Mapzen Terrain Tiles (Amazon Web Services Open Data).</p>
+
+<p class="dim">© 2026 AK · CityPanorama (Privatperson, Deutschland)</p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

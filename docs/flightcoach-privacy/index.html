@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlightCoach — Datenschutzerklärung</title>
+<style>
+  :root { --ink:#13203a; --dim:#5d6678; --bg:#f6f4ef; --line:#dcd8cf; --accent:#1f5fae; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e6e1; --dim:#9aa3b2; --bg:#0d1220; --line:#252c3c; --accent:#6aa8ff; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: var(--ink); background: var(--bg); }
+  h1 { font-size: 1.7rem; margin: .2em 0; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  a { color: var(--accent); } .dim { color: var(--dim); } img.icon { width: 96px; border-radius: 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; } th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<p><a href="https://skyvane.app/flightcoach-app/">← FlightCoach</a></p>
+<h1>Datenschutzerklärung — FlightCoach</h1>
+<p class="dim">Stand: Version 1.0, November 2026 · <a href="#en">English below</a></p>
+<p>Verantwortlich: FlightCoach (Privatperson, Deutschland), <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+<p>FlightCoach kommt ohne personenbezogene Daten beim Entwickler aus: kein Konto, keine Anmeldung, keine Analytik,
+keine Werbung, kein Server dieses Projekts.</p>
+<h2>Was auf dem Gerät bleibt</h2>
+<table>
+<tr><th>Daten</th><th>Wozu</th><th>Wo</th></tr>
+<tr><td>Standort (GPS)</td><td>Geschwindigkeit, Kurs, Flugweg, Flugplatz und Lage zur Bahn</td><td>Gerät und deine private iCloud</td></tr>
+<tr><td>Kamera und Mikrofon</td><td>Video rund um Starts, Landungen und Manöver; Drehzahl aus dem Motorgeräusch</td><td>Gerät und, wenn eingeschaltet, deine private iCloud</td></tr>
+<tr><td>Bewegungssensoren und Barometer</td><td>Lage, Höhe, Steigrate, Aufsetzstoß</td><td>Gerät und deine private iCloud</td></tr>
+</table>
+<p>Die iCloud-Ablage ist die private CloudKit-Datenbank deines Apple-Kontos. Der Entwickler kann sie nicht einsehen.
+Du kannst sie in den Einstellungen der App abschalten und Flüge jederzeit löschen.</p>
+<h2>Dienste, die die App fragt</h2>
+<table>
+<tr><th>Dienst</th><th>Wozu</th><th>Was er erfährt</th></tr>
+<tr><td>aviationweather.gov (NOAA)</td><td>METAR des nächsten Flugplatzes: Wind, QNH, Temperatur</td><td>Ein Ausschnitt von etwa 120 km um deinen Standort, deine IP-Adresse</td></tr>
+<tr><td>Open-Meteo (open-meteo.com)</td><td>Geländehöhen für die 3D-Ansicht</td><td>Ein Raster von 100 Punkten um den Flugweg, deine IP-Adresse</td></tr>
+<tr><td>Apple Karten</td><td>Kartenbilder in der Kartenansicht</td><td>Nach den Bedingungen von Apple</td></tr>
+</table>
+<p>Keine dieser Anfragen trägt eine Kennung oder ist mit einem Konto verknüpft. Weil dabei Koordinaten das Gerät
+verlassen, steht im App Store unter „App-Datenschutz“: <em>Genauer Standort — App-Funktionalität, nicht mit dir
+verknüpft, kein Tracking</em>.</p>
+<h2>Feedback</h2>
+<p>„Feedback senden“ öffnet eine Mail an die oben genannte Adresse. Technische Angaben (Version, Gerät, iOS, Zahl der
+Flüge) hängt die App nur an, wenn du es willst — nie Orte oder Flugwege.</p>
+<h2 id="en">English</h2>
+<p>FlightCoach has no account, no analytics and no server of its own. Location, camera, microphone and motion data stay
+on your device and in your private iCloud (CloudKit), which the developer cannot access. The app asks
+aviationweather.gov for the nearest METAR (an area of about 120 km around you) and Open-Meteo for terrain heights
+(points around your flight path); neither request carries an identifier. Because coordinates leave the device, the
+App Store privacy label lists <em>Precise Location — App Functionality, not linked to you, no tracking</em>. Contact:
+<a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+<p class="dim">© AK</p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

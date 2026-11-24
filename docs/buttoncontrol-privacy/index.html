@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ButtonControl — Datenschutzerklärung</title>
+<style>
+  :root { --ink:#13203a; --dim:#5d6678; --bg:#f6f4ef; --line:#dcd8cf; --accent:#c8641e; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e6e1; --dim:#9aa3b2; --bg:#0d1220; --line:#252c3c; --accent:#f5883a; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: var(--ink); background: var(--bg); }
+  h1 { font-size: 1.7rem; margin: .2em 0; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  a { color: var(--accent); } .dim { color: var(--dim); } img.icon { width: 96px; border-radius: 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; } th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<p><a href="https://skyvane.app/buttoncontrol-app/">← ButtonControl</a></p>
+<h1>Datenschutzerklärung — ButtonControl</h1>
+<p class="dim">Stand: Version 0.1, Oktober 2026 · <a href="#en">English below</a></p>
+
+<p>Verantwortlich: ButtonControl (Privatperson, Deutschland), <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+
+<p>ButtonControl kommt ohne personenbezogene Daten aus: kein Konto, keine Anmeldung, keine Analytik,
+keine Werbung und kein Server dieses Projekts. Die App spricht mit deiner eigenen Station in deinem Heimnetz.</p>
+
+<h2>Was das Gerät verlässt</h2>
+<table>
+<tr><th>Wohin</th><th>Was</th><th>Wozu</th></tr>
+<tr><td>Deine Station (Bluetooth, einmalig)</td><td>WLAN-Name und -Passwort, ein Zugangstoken</td><td>Die Station ins WLAN bringen</td></tr>
+<tr><td>Deine Station (Heimnetz)</td><td>Adresse des Abfuhrkalenders, ein Ort auf etwa 1 km gerundet, Name der Station</td><td>Tonnen und Wetter anzeigen</td></tr>
+<tr><td>Apple Karten</td><td>Der eingetippte Ortsname</td><td>Ort für das Wetter finden</td></tr>
+<tr><td>Server deines Entsorgers</td><td>Abruf des Kalenders, deine IP-Adresse</td><td>Vorschau beim Prüfen</td></tr>
+</table>
+<p>Die Station selbst ruft den Kalender beim Entsorger und das Wetter bei Open-Meteo (open-meteo.com) ab.
+Nichts davon erreicht den Entwickler. Das WLAN-Passwort speichert die App nicht; das Token liegt im
+Schlüsselbund des iPhones.</p>
+
+<h2>Rückmeldung</h2>
+<p>Schickst du über die App Feedback, geht eine Mail aus deinem Mailprogramm an die Support-Adresse —
+auf Wunsch mit App-Version, Gerätetyp, iOS- und Firmware-Version, nie mit Adressen, Token oder Kalender.</p>
+
+<h2 id="en">English</h2>
+<p>Controller: ButtonControl (private individual, Germany), info@skyvane.app. ButtonControl
+collects no personal data: no account, no analytics, no ads, no server of this project. The app talks only to
+your own station on your home network (Wi-Fi credentials once over Bluetooth; calendar address, a place rounded
+to about 1 km). Place search goes to Apple Maps; checking a calendar fetches it from your waste company. The
+station fetches the calendar and the weather (Open-Meteo) itself. Nothing reaches the developer.</p>
+
+<p class="dim">© AK</p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

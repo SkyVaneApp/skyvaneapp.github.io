@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ButtonControl — Support</title>
+<style>
+  :root { --ink:#13203a; --dim:#5d6678; --bg:#f6f4ef; --line:#dcd8cf; --accent:#c8641e; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e6e1; --dim:#9aa3b2; --bg:#0d1220; --line:#252c3c; --accent:#f5883a; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: var(--ink); background: var(--bg); }
+  h1 { font-size: 1.7rem; margin: .2em 0; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  a { color: var(--accent); } .dim { color: var(--dim); } img.icon { width: 96px; border-radius: 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; } th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<img class="icon" src="icon.png" alt="">
+<h1>ButtonControl</h1>
+<p class="dim">Deine ESP32-Station zu Hause · <a href="#en">English below</a></p>
+
+<p>ButtonControl richtet eine ESP32-Station ein und stellt sie ein: WLAN per Bluetooth, Abfuhrkalender
+für die nächste Mülltonne, Ort für das Wetter, Kopplung mit Apple Home oder Google Home über Matter.
+Alles läuft im Heimnetz, ohne Konto und ohne Cloud.</p>
+
+<h2>Häufige Fragen</h2>
+<p><strong>Die App findet meine Station nicht.</strong> Ist das iPhone im selben WLAN? Ist „Lokales Netzwerk“
+für ButtonControl erlaubt (Einstellungen → Datenschutz &amp; Sicherheit → Lokales Netzwerk)? Sonst die
+Adresse der Station von Hand eintragen.</p>
+<p><strong>Die Einrichtung per Bluetooth scheitert.</strong> Die Station muss im Einrichtungsmodus sein
+(QR-Code auf dem Display). Der Code (PoP) muss genau stimmen.</p>
+<p><strong>Wo finde ich den Abfuhrkalender?</strong> Auf der Seite deines Entsorgers unter „Abfuhrkalender“
+→ „Kalender abonnieren“ (iCal/ICS-Link).</p>
+
+<h2>Kontakt</h2>
+<p>Fragen, Fehler, Ideen: <a href="mailto:info@skyvane.app">info@skyvane.app</a>
+— oder in der App unter Einstellungen → Feedback senden.</p>
+<p><a href="https://skyvane.app/buttoncontrol-privacy/">Datenschutzerklärung</a></p>
+
+<h2 id="en">English</h2>
+<p>ButtonControl sets up and configures an ESP32 station: Wi-Fi over Bluetooth, a bin collection calendar
+for the next bin, a place for the weather, pairing with Apple Home or Google Home via Matter. Everything
+stays on your home network — no account, no cloud. Contact:
+<a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+
+<p class="dim">© AK</p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

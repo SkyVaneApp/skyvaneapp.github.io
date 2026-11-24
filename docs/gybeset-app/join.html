@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gybeset — Team beitreten</title>
+<style>
+  :root { --ink:#0f2433; --dim:#4c6779; --bg:#edf3f6; --line:#d2dfe7; --accent:#0b5d87; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e5eff5; --dim:#93acbc; --bg:#07121a; --line:#1d3647; --accent:#55b6e2; } }
+  body { font: 17px/1.5 -apple-system, system-ui, sans-serif; max-width: 520px; margin: 40px auto; padding: 0 16px; color: var(--ink); background: var(--bg); text-align: center; }
+  h1 { font-size: 1.8rem; margin: .2em 0; letter-spacing: .02em; } .dim { color: var(--dim); }
+  .code { font: 700 2.4rem ui-monospace, Menlo, monospace; letter-spacing: .12em; margin: .4em 0; }
+  a.btn { display: block; margin: 24px 0 12px; padding: 14px; border-radius: 14px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+<p class="dim">Gybeset · Einladung / Invitation</p>
+<h1 id="team">TEAM</h1>
+<p class="dim" id="club"></p>
+<div class="code" id="code"></div>
+<a class="btn" id="open" href="#">In Gybeset öffnen · Open in Gybeset</a>
+<p class="dim">Gybeset noch nicht installiert? Erst die App laden, dann diesen Link noch einmal antippen — oder in der App
+„Mit Code beitreten“ wählen und den Code eingeben.<br><br>Not installed yet? Get the app, then tap this link again — or choose
+“Join with code” in the app and enter the code.</p>
+<script>
+  const q = new URLSearchParams(location.search);
+  const $ = (id) => document.getElementById(id);
+  // Fantasy League: ?f=<CODE> (beitreten) → gybeset://fantasy?c=…; ?t=<payload> (Tipp) → gybeset://tip?t=…
+  const f = (q.get('f') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 16);
+  const t = (q.get('t') || '').replace(/[^A-Za-z0-9_-]/g, '');
+  if (f || t) {
+    document.title = 'Gybeset — Fantasy League';
+    let app, title = 'Fantasy League', sub = '';
+    if (t) {
+      app = 'gybeset://tip?t=' + t;
+      try {
+        const p = JSON.parse(decodeURIComponent(escape(atob(t.replace(/-/g, '+').replace(/_/g, '/')))));
+        title = 'Tipp · Tip: ' + (p.t || '');
+        sub = (p.r > 0 ? 'R' + p.r : 'Gesamt · Overall') + (p.n ? ' – ' + p.n : '') + ' · ' + (p.c || '');
+      } catch (e) { title = 'Tipp · Tip'; }
+    } else {
+      app = 'gybeset://fantasy?c=' + f;
+      sub = 'Beitreten · Join';
+      $('code').textContent = f;
+    }
+    $('team').textContent = title;
+    $('club').textContent = sub;
+    $('open').href = app;
+    document.querySelector('p.dim:last-of-type').innerHTML = t
+      ? 'Für den Spielleiter: In Gybeset öffnen übernimmt den Tipp. Maßgeblich ist die Zeit der Nachricht.<br><br>For the game master: open in Gybeset to take over the tip. The time of the message counts.'
+      : 'Gybeset noch nicht installiert? Erst die App laden, dann diesen Link noch einmal antippen — oder in der App unter Liga › Fantasy League „Fantasy League beitreten“ wählen und den Code eingeben.<br><br>Not installed yet? Get the app, then tap this link again — or choose “Join Fantasy League” in the app and enter the code.';
+    setTimeout(() => { location.href = app; }, 300);
+  } else {
+  const code =(q.get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+  const club = (q.get('club') || '').toUpperCase(), team = (q.get('team') || '').toUpperCase(), helm = q.get('helm') || '';
+  document.getElementById('team').textContent = (team || 'TEAM') + (helm ? ' / ' + helm : '');
+  document.getElementById('club').textContent = club;
+  document.getElementById('code').textContent = code.slice(0, 3) + ' ' + code.slice(3);
+  // Link läuft nach 7 Tagen ab (exp = Unix-Zeit); der Code nicht. Links ohne exp gelten weiter.
+  const exp = parseInt(q.get('exp') || '', 10);
+  if (exp > 0 && Date.now() / 1000 > exp) {
+    $('open').style.display = 'none';
+    document.querySelector('p.dim:last-of-type').innerHTML =
+      '<b>Einladung abgelaufen</b> — bitte um eine neue oder gib in Gybeset unter „Mit Code beitreten“ den Code ein.' +
+      '<br><br><b>Invitation expired</b> — ask for a new one or enter the code in Gybeset under “Join with code”.';
+  } else {
+  const app = 'gybeset://join?' + new URLSearchParams(Object.assign({ c: code, club, team }, helm ? { helm } : {}, exp > 0 ? { exp } : {})).toString();
+  document.getElementById('open').href = app;
+  if (code.length === 6) setTimeout(() => { location.href = app; }, 300);
+  }
+  }
+</script>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

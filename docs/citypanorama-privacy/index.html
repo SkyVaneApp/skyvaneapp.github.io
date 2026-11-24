@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CityPanorama — Datenschutzerklärung</title>
+<style>
+  :root { --ink:#13203a; --dim:#5d6678; --bg:#f6f4ef; --line:#dcd8cf; --accent:#1f5fae; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e6e1; --dim:#9aa3b2; --bg:#0d1220; --line:#252c3c; --accent:#6aa8ff; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: var(--ink); background: var(--bg); }
+  h1 { font-size: 1.7rem; margin: .2em 0; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  a { color: var(--accent); } .dim { color: var(--dim); }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; } th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<p><a href="https://skyvane.app/citypanorama-app/">← CityPanorama</a></p>
+<h1>Datenschutzerklärung — CityPanorama</h1>
+<p class="dim">Stand: Version 1.1, Oktober 2026 · <a href="#en">English below</a></p>
+
+<p>CityPanorama zeichnet die Skyline von Berlin vom Standort des Nutzers aus. Die App ist so gebaut,
+dass sie ohne personenbezogene Daten auskommt: es gibt kein Konto, keine Anmeldung, keine Analytik,
+keine Werbung und keinen Server dieses Projekts.</p>
+
+<h2>Was wir erheben</h2>
+<p><strong>Nichts, was wir speichern oder sehen könnten</strong> — dieses Projekt betreibt keinen Server.
+Für Berlin liegen die Stadtdaten in der App. <strong>Außerhalb Berlins</strong> lädt die App die Kartendaten
+der Umgebung von zwei öffentlichen Diensten (siehe unten) und speichert sie auf dem Gerät, damit jede
+Gegend nur einmal abgefragt wird.</p>
+
+<h2>Dienste, die die App außerhalb Berlins fragt</h2>
+<table>
+<tr><th>Dienst</th><th>Wozu</th><th>Was er erfährt</th></tr>
+<tr><td>Overpass-API (overpass-api.de, ersatzweise overpass.private.coffee) — Daten von OpenStreetMap</td>
+<td>Gebäude, Türme, Gipfel, Wasser, Parks, Straßen, Bahn</td>
+<td>Ein Kartenausschnitt fester Größe (etwa 4–55 km) um deinen Standort, deine IP-Adresse</td></tr>
+<tr><td>Terrarium-Höhenkacheln bei Amazon Web Services</td>
+<td>Gelände</td>
+<td>Welche Kacheln (je etwa 25 km) geladen werden, deine IP-Adresse</td></tr>
+</table>
+<p>Der genaue Standort wird nie übertragen, nur welche festen Kacheln gebraucht werden. Es gibt keine
+Kennung, kein Konto, und die Anfragen sind mit nichts anderem verknüpft.</p>
+
+<h2>Standort</h2>
+<p>Beim ersten Start fragt die App nach deinem Standort, und zwar nur für die Zeit, in der sie benutzt wird.
+Er bestimmt, von wo aus die Skyline gerechnet wird; der <strong>genaue Standort verlässt das Gerät nicht</strong>
+(außerhalb Berlins nur die Kachel, in der er liegt, siehe oben). Lehnst du ab
+oder schaltest „GPS verwenden“ aus, rechnet die App von einem Punkt, den du auf der Karte wählst. Gespeichert
+wird nur dieser von Hand gesetzte Punkt, in den Einstellungen der App auf dem Gerät.</p>
+
+<h2>Kamera</h2>
+<p>Nur wenn du die Kamera einschaltest, zeigt die App das Bild der Rückkamera hinter den Linien. Es wird
+weder gespeichert noch übertragen.</p>
+
+<h2>Bewegungssensoren</h2>
+<p>Kompass und Lagesensor bestimmen die Blickrichtung. Die Werte werden nur auf dem Gerät verwendet.</p>
+
+<h2>Dienste von Apple und Links</h2>
+<p>Die Karte im Blatt „Standort &amp; Höhe“ ist Apple Karten (MapKit); dabei lädt das Gerät Kartenbilder
+von Apple, nach den Bedingungen von Apple. Der Knopf „Wikipedia“ öffnet einen Artikel in deinem
+Browser; ab dort gelten die Bestimmungen der Wikimedia Foundation.</p>
+
+<h2>Verantwortlich</h2>
+<p>CityPanorama (Privatperson, Deutschland) · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+
+<h2 id="en">Privacy policy (English)</h2>
+<p>CityPanorama has no account, no analytics, no advertising and no server. For Berlin the city data is
+bundled. Elsewhere the app loads the map data around you from the Overpass API (OpenStreetMap) and the
+Terrarium elevation tiles on Amazon Web Services, in fixed tiles of a few to some 50 km, and keeps them on
+the device; those services see which tiles are requested and your IP address, never your exact position.
+On first launch the app asks for your location, only while it is in use; it sets where the skyline is
+drawn from and never leaves the device as such. If you decline, you pick the viewpoint on the map. The camera picture, if you switch it on, is neither stored nor sent. The map uses Apple MapKit;
+the Wikipedia button opens your browser. Contact: <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

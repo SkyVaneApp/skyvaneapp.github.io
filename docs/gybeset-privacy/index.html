@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gybeset — Datenschutzerklärung</title>
+<style>
+  :root { --ink:#0f2433; --dim:#4c6779; --bg:#edf3f6; --line:#d2dfe7; --accent:#0b5d87; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e5eff5; --dim:#93acbc; --bg:#07121a; --line:#1d3647; --accent:#55b6e2; } }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: var(--ink); background: var(--bg); }
+  h1 { font-size: 1.7rem; margin: .2em 0; } h2 { font-size: 1.15rem; margin-top: 1.8em; }
+  a { color: var(--accent); } .dim { color: var(--dim); }
+</style>
+</head>
+<body>
+<p><a href="https://skyvane.app/gybeset-app/">← Gybeset</a></p>
+<h1>Datenschutzerklärung — Gybeset</h1>
+<p class="dim">Stand: Version 0.16, November 2026 · <a href="#en">English below</a></p>
+
+<p>Gybeset zeichnet beim Segeln Position, Geschwindigkeit und Kurs auf und wertet Trainingsrennen einer
+Gruppe aus. Es gibt kein Konto bei uns, keine Analytik und keine Werbung.</p>
+
+<h2>Standort</h2>
+<p>Die App fragt nach dem Standort, solange sie benutzt wird. Während eines Laufs (ab Beginn der
+Startfolge bis „Beenden“) zeichnet sie jede Ortung auf, auch bei gesperrtem Bildschirm; iOS zeigt das in der
+Statusleiste an. Die Aufzeichnungen liegen auf deinem iPhone (in der Dateien-App unter „Gybeset“).</p>
+
+<h2>Gruppe (iCloud)</h2>
+<p>Wenn du eine Gruppe anlegst oder einer beitrittst, werden deine Läufe (Positionen, Geschwindigkeit, Kurs,
+Zeit, Segelnummer) in iCloud gespeichert und mit den Mitgliedern der Gruppe geteilt. Die Daten liegen im
+iCloud-Konto dessen, der die Gruppe angelegt hat, nach den Bedingungen von Apple. Wir haben darauf keinen
+Zugriff. Wer die Gruppe verlässt oder entfernt wird, sieht ihre Daten nicht mehr.</p>
+
+<h2>Boote in der Nähe</h2>
+<p>Für das Startsignal tauscht die App mit Geräten in der Nähe über Bluetooth und WLAN (ohne Internet) die
+Segelnummer, den Startzeitpunkt und Zeitstempel für den Uhrabgleich aus — keine Positionen.</p>
+
+<h2>Vorbereitung vor dem Start</h2>
+<p>Eröffnet der Trainer eine Vorbereitung und du machst mit, prüft dein iPhone alle 30 Sekunden selbst, ob es innerhalb
+des eingestellten Radius um die Startlinie liegt. Nur dann sendet es Position, Geschwindigkeit und Kurs an die Mitglieder
+deiner Gruppe (iCloud, Bereich der Gruppe) bzw. an Boote in Funkreichweite; außerhalb nur „dabei“, ohne Position.
+Lehnst du ab, wird nur „abgelehnt“ übermittelt. Die Meldungen enden mit dem Start, dem Abbruch oder spätestens nach
+60 Minuten und werden dann gelöscht. Die Teilnahme ist freiwillig.</p>
+
+<h2>Live-Verfolgung (nur wenn eingerichtet)</h2>
+<p>Ist in den Einstellungen eine Relay-Adresse eingetragen, sendet die App während eines Laufs Position,
+Geschwindigkeit und Kurs alle zwei Sekunden an diesen Server, damit Gruppe und Zuschauer das Rennen live
+sehen. Der Server hält die Positionen höchstens 15 Minuten im Speicher und schreibt sie nicht auf. Wer den
+Link der Gruppe kennt, sieht die Positionen live.</p>
+
+<h2>Wetterbericht</h2>
+<p>Für Windrichtung und -stärke fragt die App den Wetterdienst Open-Meteo (open-meteo.com) nach dem Wind am Ort.
+Dabei geht die Position auf etwa einen Kilometer gerundet hinaus, höchstens alle zehn Minuten, ohne Kennung des
+Geräts. Der Wert wird mit der Aufzeichnung gespeichert.</p>
+
+<h2>Sperrbildschirm</h2>
+<p>Während eines Laufs zeigt die App Platz, Zeit, Meterverlust und Score als Live-Aktivität auf dem
+Sperrbildschirm. Die Werte entstehen auf dem iPhone und werden nicht verschickt.</p>
+
+<h2>Importierte Spuren</h2>
+<p>Dateien, die du importierst, einfügst oder hereinziehst (GPX, FIT, TCX, KML, NMEA), werden nur auf dem
+Gerät gespeichert — und in der Gruppe nur, wenn du sie dorthin hochlädst.</p>
+
+<h2>Bundesliga-Rennen (nur auf Wunsch)</h2>
+<p>Tippst du in der Auswertung auf „Bundesliga-Rennen laden“, ruft die App öffentliche Renndaten von SAP Sailing
+Analytics (sapsailing.com) ab. Dabei sieht SAP wie bei jedem Webseitenaufruf die IP-Adresse des Geräts; es werden
+keine Daten von dir gesendet.</p>
+
+<h2>Teams und Clubs (öffentliche iCloud-Datenbank)</h2>
+<p>Gründest du ein Team oder trittst du einem bei, legt die App einen Eintrag im Team-Verzeichnis an: deinen
+Seglernamen, eine zufällige Mitglieds-Kennung dieses Geräts, Club, Team, Steuermann und ob du Trainer bist. Das
+Verzeichnis liegt in der öffentlichen iCloud-Datenbank von Gybeset (Apple CloudKit). Gefunden werden die Einträge nur
+über den 6-stelligen Code oder den Einladungslink des Teams; eine Liste aller Teams oder eine Suche gibt es nicht. Wer
+den Code kennt, sieht die Namen der Mitglieder. Einträge löschen wir auf Anfrage per Mail.</p>
+
+<h2>Fantasy League (nur wenn du tippst)</h2>
+<p>Gibst du in der App einen Tipp ab, speichert sie in derselben öffentlichen Datenbank den Code der Fantasy League,
+deinen Namen, das getippte Team, das Rennen und die Uhrzeit. Ordnet der Spielleiter Tipps über die Telefonnummer zu, geht
+nur ein Hashwert aus Nummer und Code hinaus, nie die Nummer selbst. Den Stand sieht, wer Code oder Link der League hat.
+Es geht um kein Geld und keine Preise.</p>
+
+<h2>Liga-Daten (nur auf Wunsch)</h2>
+<p>„Bundesliga 2026 laden“ ruft öffentliche Ergebnisse von TracTrac (tractrac.com) ab; Links führen zu
+segelbundesliga.de. Dabei sieht der Anbieter die IP-Adresse des Geräts; es werden keine Daten von dir gesendet.</p>
+
+<h2>Karte</h2>
+<p>Die Karte einer Aufzeichnung ist Apple Karten (MapKit); dabei lädt das Gerät Kartenbilder von Apple,
+nach den Bedingungen von Apple.</p>
+
+<h2>Einstellungen</h2>
+<p>Der Bootsname, den du einträgst, steht in den Einstellungen der App auf dem Gerät und in deinen
+Aufzeichnungen.</p>
+
+<h2>Rückmeldung</h2>
+<p>„Feedback senden“ öffnet eine Mail an uns mit App-Version, Gerätetyp und iOS-Version, ohne Standort.
+Was du schickst, entscheidest du in deinem Mailprogramm.</p>
+
+<h2>Verantwortlich</h2>
+<p>Gybeset (Privatperson, Deutschland) · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+
+<h2 id="en">Privacy policy (English)</h2>
+<p>Gybeset records position, speed and course while you sail. There is no account with us, no analytics and
+no advertising. During a run the app records every location fix, also with the screen locked. Recordings stay
+on your iPhone; if you join a group, your runs are stored in iCloud and shared with its members. For the start
+signal, nearby devices exchange sail number, start time and clock timestamps via Bluetooth/Wi-Fi. If a relay
+address is set, positions are sent live every two seconds and kept in memory for at most 15 minutes.
+For wind direction and strength the app asks Open-Meteo for the forecast at your position, rounded to about one kilometre, at most every ten minutes and without any device identifier. The lock-screen Live Activity is computed on the device and never sent. Imported tracks stay on the device unless you upload them to your group. On request (“load Bundesliga races”) the app downloads public race data from SAP Sailing Analytics, which sees the device's IP address like any web request. Team directory and Fantasy League: when you found or join a team, your sailor name, a random member ID of this device, club, team, helm and trainer flag are stored in Gybeset’s public iCloud database (Apple CloudKit), findable only via the team’s 6-digit code or invite link — there is no list or search of teams. A tip in the Fantasy League stores the league code, your name, the team you picked, race and time; if the organiser matches tips by phone number, only a hash of number and code is sent, never the number. No money or prizes are involved. We delete entries on request by e-mail. “Load Bundesliga 2026” downloads public results from TracTrac, which sees the device’s IP address. The map uses Apple MapKit. Feedback opens an e-mail containing app version, device type and iOS version,
+never your location. Contact: <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>

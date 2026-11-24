@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RadPendler — Datenschutzerklärung</title>
+<style>
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #14231f; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 1.6em; }
+  .date { color: #667; } code { background: #eef4f3; padding: 1px 5px; border-radius: 4px; }
+  address { font-style: normal; margin: 0.6em 0 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .95rem; }
+  th, td { border: 1px solid #dde6e4; padding: 6px 9px; text-align: left; vertical-align: top; }
+  th { background: #f3f7f6; font-weight: 600; }
+  a { color: #00857c; }
+  @media (prefers-color-scheme: dark) {
+    body { background:#0b1513; color:#dff0ec; } code{background:#152421;} .date{color:#8aa09a;}
+    a{color:#3fd0c4;} th,td{border-color:#1c2a27;} th{background:#111f1c;}
+  }
+</style>
+</head>
+<body>
+
+<p style="margin-bottom:1.2em"><a href="https://skyvane.app/radpendler-app/">← RadPendler</a></p>
+
+<h1>Datenschutzerklärung — RadPendler</h1>
+<p class="date">Stand: 7. Oktober 2026</p>
+
+<p>RadPendler ist ein Pendel-Planer für iPhone, iPad und Apple Watch. Die App
+ist so gebaut, dass sie ohne die Erhebung personenbezogener Daten auskommt: es
+gibt kein Konto, keine Anmeldung und keinen Server dieses Projekts.</p>
+
+<p><strong>Das Wichtigste vorweg:</strong> Damit die App eine Route, einen
+Fahrplan oder den Regen auf deinem Weg zeigen kann, fragt dein Gerät
+<a href="#dritte">externe Dienste</a> — und nennt ihnen dabei deine
+<strong>Start- und Zieladresse als Koordinaten</strong>, bei manchen auch
+Punkte entlang der Strecke oder den Text, den du in die Adresssuche tippst.
+Das sind in der Regel dein Zuhause und dein Arbeitsplatz. Diese Anfragen gehen
+direkt von deinem Gerät an den jeweiligen Anbieter, ohne Konto und ohne
+Kennung, aber mit deiner IP-Adresse. Welche Dienste das sind und was jeder
+bekommt, steht in der <a href="#dritte">Tabelle unten</a>.</p>
+
+<h2>Was wir erheben</h2>
+<p><strong>Nichts.</strong> Dieses Projekt selbst erhebt und speichert keine
+personenbezogenen Daten: es gibt keine Nutzerkonten, keine Analytik, keine
+Werbung, keine Tracking-SDKs von Dritten und keinen Server, auf den etwas
+fließen könnte — weil dieses Projekt keinen betreibt. Was dein Gerät den
+Routing-, Fahrplan- und Wetterdiensten nennt, damit sie antworten können,
+steht <a href="#dritte">weiter unten</a>.</p>
+
+<h2>Was auf deinen Geräten bleibt</h2>
+<p>Alles, was du eingibst, liegt im privaten Speicher der App auf dem Gerät:
+Start- und Zieladresse, die Adressen für „Zuhause“ und „Arbeit“, Fixpunkte, die
+Liste der zuletzt benutzten Adressen, deine Entscheidungen zur Fahrradmitnahme
+je Linie und alle Einstellungen. Die App wird <em>ohne</em> Adressen
+ausgeliefert und enthält keine.</p>
+<p>Ist auf deinem Gerät ein iCloud-Konto angemeldet, gleichen sich diese
+Angaben über den <strong>iCloud-Schlüssel-Wert-Speicher</strong> zwischen deinen
+eigenen Geräten ab — also zwischen deinem iPhone und deinem iPad. Das ist
+<em>deine</em> iCloud: die Daten liegen bei Apple unter deinem Konto und sind
+für uns nicht einsehbar. Ohne angemeldetes iCloud-Konto bleibt alles auf dem
+einen Gerät. Der aktuelle Plan geht zusätzlich direkt an deine Apple Watch
+(WatchConnectivity); er enthält bewusst keine Koordinaten und keine Routen,
+sondern nur Zeiten, Linien und Farben.</p>
+<p>Löschst du die App, sind diese Daten auf dem Gerät weg. Was in deiner iCloud
+liegt, löschst du über die iCloud-Einstellungen deines Apple-Kontos.</p>
+
+<h2>Was eine Fahrt sonst noch auslöst</h2>
+<p>Während einer Aufzeichnung hält die App von selbst an, wenn du lange an
+derselben Stelle stehst, und läuft weiter, sobald du wieder fährst. Dabei bleibt
+die Ortung an, aber sparsam. Nichts davon verlässt dein Gerät zusätzlich: es
+ist dieselbe Aufzeichnung, nur mit weniger Strom.</p>
+<p>Löschst du eine Fahrt, eine benutzte Adresse oder die gelernten Ampeln, reist
+seit Version 1.4 auch diese Löschung über deine iCloud — damit sie nicht von
+einem zweiten Gerät zurückkommt. Dafür merkt sich die App die Kennung des
+gelöschten Eintrags mit einem Zeitstempel, 90 Tage lang, und sonst nichts.</p>
+<h2>Aufgezeichnete Fahrten</h2>
+<p>Seit Version 1.1 kann RadPendler eine Fahrt aufzeichnen. Das passiert
+<strong>nur, wenn du es startest</strong>, und nur bis du sie beendest. Solange
+eine Aufzeichnung läuft, schreibt die App den <strong>gefahrenen Weg</strong>
+mit: Koordinaten mit Zeitstempel und Geschwindigkeit, dazu die Stellen, an
+denen du gestanden hast, und wie lange. Daraus entstehen die Zahlen, die du
+hinterher siehst — Strecke, Durchschnitt, Ampelhalts, Wartezeiten.</p>
+<p>Diese Aufzeichnungen liegen im privaten Speicher der App. Ist ein
+iCloud-Konto angemeldet, gehen die <strong>Kennzahlen</strong> einer Fahrt —
+Datum, Dauer, Strecke, Durchschnitt, Anzahl der Halte — zusätzlich über den
+iCloud-Schlüssel-Wert-Speicher auf deine anderen Geräte, damit dieselbe Liste
+überall steht. Seit Version&nbsp;1.3 reist auf demselben Weg auch der
+<strong>gefahrene Weg selbst</strong> — die Linie einer Fahrt liegt dann in
+deiner privaten <strong>iCloud-Datenbank</strong> (CloudKit), damit eine auf
+dem iPhone aufgezeichnete Fahrt auch auf dem iPad ihre Karte hat. Beides ist
+<em>deine</em> iCloud: die Daten liegen bei Apple unter deinem Konto, wir
+haben keinen Zugriff darauf, und dieses Projekt betreibt keinen Server, auf
+dem irgendetwas davon landen könnte. Ohne angemeldetes iCloud-Konto bleibt
+jede Aufzeichnung auf dem Gerät, auf dem sie entstanden ist. Eine Fahrt löschst du in der Liste (nach links wischen) — auf
+dem Gerät, auf dem du es tust.</p>
+<p>Während einer Aufzeichnung gehen <strong>keine</strong> Positionsdaten an
+die unten genannten Routing- und Fahrplandienste. Die Aufzeichnung ist eine
+reine Messung auf dem Gerät.</p>
+
+<h2 id="dritte">Was das Gerät an Dritte sendet — und warum</h2>
+<p>Eine Route lässt sich nicht berechnen, ohne zu sagen, wo sie anfängt und wo
+sie hinführt. Sobald du eine Verbindung suchst, überträgt dein Gerät deshalb
+<strong>Start- und Zielkoordinaten</strong> (bzw. den gesuchten Adresstext, den
+Kartenausschnitt oder Punkte entlang der Strecke) an die folgenden Dienste.
+Diese Anfragen gehen direkt von deinem Gerät an den jeweiligen Anbieter; sie
+laufen über keinen Server dieses Projekts, und wir sehen sie nicht.</p>
+
+<table>
+<tr><th>Dienst</th><th>Wofür</th><th>Was übertragen wird</th></tr>
+<tr>
+  <td>VBB-API der <a href="https://www.vbb.de/">VBB</a> Verkehrsverbund
+      Berlin-Brandenburg GmbH (<code>fahrinfo.vbb.de</code>, ab 30.11.2026
+      <code>vbb.hafas.cloud</code>)</td>
+  <td>Fahrplan und Echtzeit in Berlin und Brandenburg, Fahrradmitnahme je Zug</td>
+  <td>Start- und Zielkoordinaten bzw. Haltestellen, Datum und Uhrzeit; dazu die
+      Zugangskennung der App (für alle Nutzer dieselbe, keine Kennung der Person)</td>
+</tr>
+<tr>
+  <td><a href="https://transitous.org/">Transitous</a> / MOTIS
+      (<code>api.transitous.org</code>)</td>
+  <td>Fahrpläne außerhalb des VBB-Gebiets, intermodale Rad-Bahn-Planung</td>
+  <td>Start- und Zielkoordinaten, Datum und Uhrzeit</td>
+</tr>
+<tr>
+  <td>Apple <a href="https://www.apple.com/de/maps/">MapKit</a></td>
+  <td>Kartenkacheln, Adresssuche, Auto- und Fußwege</td>
+  <td>Kartenausschnitt, Suchtext, Start- und Zielkoordinaten</td>
+</tr>
+<tr>
+  <td><a href="https://brouter.de/">BRouter</a></td>
+  <td>Radrouten auf OpenStreetMap-Daten</td>
+  <td>Start- und Zielkoordinaten</td>
+</tr>
+<tr>
+  <td><a href="https://www.openstreetmap.org/">OpenStreetMap</a> über die
+      Overpass API</td>
+  <td>Ampeln und Hauptstraßen im Korridor der Route</td>
+  <td>Stützpunkte entlang der gefundenen Routen, etwa alle 150&nbsp;m, mit der
+      Bitte um alles im Umkreis von 300&nbsp;m. Bis Version&nbsp;1.2 war es
+      statt dessen ein rechteckiger Ausschnitt um die ganze Strecke; entlang
+      der Linie zu fragen überträgt zwar den Verlauf der Route, holt dafür
+      aber ein Zwölftel der Daten. Die Antwort wird 30 Tage auf dem Gerät
+      zwischengespeichert.</td>
+</tr>
+<tr>
+  <td><a href="https://www.dwd.de/">Deutscher Wetterdienst</a> (GeoServer-WMS)</td>
+  <td>Regenradar und Nowcast als Kartenbilder</td>
+  <td>der Kartenausschnitt und der Zeitpunkt</td>
+</tr>
+<tr>
+  <td><a href="https://open-meteo.com/">Open-Meteo</a></td>
+  <td>Regen an den Punkten deiner Strecke</td>
+  <td>einzelne Koordinaten entlang der Route</td>
+</tr>
+</table>
+
+<p>Jede Anfrage an die VBB-API, Transitous, BRouter, die Overpass API und Open-Meteo trägt
+außerdem einen <code>User-Agent</code>, der die App benennt — „RadPendler“, die
+Versionsnummer, „Commute App“ und die Adresse des Quelltexts als Kontakt. Er ist
+für alle Nutzer derselbe und sagt nichts über dich oder dein Gerät; die
+Betreiber können damit zuordnen, welche App fragt, und sich melden, statt sie
+auszusperren.</p>
+
+<p>Für jeden dieser Anbieter gilt dessen eigene Datenschutzerklärung. Wie bei
+jeder Netzanfrage erreicht den Anbieter dabei auch die IP-Adresse deines
+Geräts, und eine IP-Adresse ist ein personenbezogenes Datum. Wir sehen sie
+nicht und bekommen sie nicht. Wir sagen es lieber deutlich, als alles
+aufzuzählen, was auf dem Gerät bleibt, und die Lücke sprechen zu lassen.</p>
+
+<p>Wenn du keine Verbindung suchst, sendet die App nichts. Ohne Netz zeigt sie,
+was sie zuletzt wusste, und sagt dazu, wie alt das ist.</p>
+
+<h2>Berechtigungen</h2>
+<p><strong>Standort (Beim Verwenden der App)</strong> — freiwillig, und für
+zwei Dinge. Erstens: „Mein Standort“ als Startadresse. Dafür wird die Position
+<em>einmal</em> abgefragt, in eine Adresse übersetzt und nicht gespeichert.
+Zweitens: das Aufzeichnen einer Fahrt, wenn du eine startest.</p>
+<p>Weil eine Pendelfahrt nicht aufzuzeichnen ist, solange man das Telefon in
+der Hand halten und den Bildschirm anlassen muss, läuft die Aufzeichnung auch
+weiter, wenn der Bildschirm gesperrt ist und das Telefon in der Tasche steckt.
+iOS zeigt dafür die ganze Zeit die <strong>blaue Leiste</strong> am oberen
+Bildschirmrand. Sobald du „Fahrt beenden“ antippst, hört die Ortung auf und die
+App schaltet die Hintergrundnutzung selbst wieder ab. <strong>Außerhalb einer
+laufenden Aufzeichnung verfolgt RadPendler nichts</strong> — es gibt kein
+Mitschreiben im Hintergrund, keine Bewegungserkennung und keine
+Standortverläufe, die du nicht selbst gestartet hast.</p>
+<p><strong>Hintergrund-Aktualisierung</strong> — seit Version&nbsp;1.3 darf iOS
+die App gelegentlich wecken, um <em>denselben</em> Weg noch einmal zu planen,
+auf den gerade der Countdown läuft, und die Warnungen auf den aktuellen
+Fahrplan nachzustellen: fährt der Zug später als beim letzten Öffnen bekannt,
+klingelt es sonst zu früh. Dabei gehen dieselben Start- und Zielkoordinaten
+an dieselben Dienste wie bei einer Suche, die du selbst auslöst — nur eben,
+ohne dass die App offen ist. <strong>Deine Position wird dafür nicht
+abgefragt</strong>; benutzt werden die eingestellten Adressen. Wann und ob
+iOS weckt, entscheidet iOS; abschalten lässt es sich in den iOS-Einstellungen
+unter „Allgemein → Hintergrundaktualisierung“. Läuft gerade kein Countdown,
+meldet die App diesen Bedarf gar nicht erst an.</p>
+<p>Lehnst du die Ortung ab, funktioniert alles andere unverändert weiter; Start
+und Ziel wählst du dann von Hand, und aufzeichnen lässt sich nichts. Die
+Position wird nicht an uns übertragen — als Startkoordinate geht sie an die
+oben genannten Routing- und Fahrplandienste, als Aufzeichnung an niemanden.</p>
+<p><strong>Mitteilungen</strong> — freiwillig, für die Warnungen vor dem
+Losgehen. Es sind <em>lokale</em> Mitteilungen: sie werden auf dem Gerät
+erzeugt und ausgelöst. Es gibt keinen Push-Dienst und kein Gerätetoken, das
+irgendwohin ginge.</p>
+<p>RadPendler fragt nach keinen weiteren Berechtigungen. Kamera, Mikrofon,
+Fotos, Kontakte, Kalender und Gesundheitsdaten werden nicht verwendet.</p>
+
+<h2>Kinder</h2>
+<p>RadPendler erhebt wissentlich von niemandem Daten, auch nicht von
+Kindern.</p>
+
+<h2>Verantwortlich</h2>
+<p>Verantwortlicher im Sinne der DSGVO und Ansprechpartner für alles, was auf
+dieser Seite steht:</p>
+<address>
+RadPendler (Privatperson, Deutschland)<br>
+<a href="mailto:info@skyvane.app">info@skyvane.app</a>
+</address>
+<p>Nach der DSGVO hast du das Recht, Auskunft über die zu dir gespeicherten
+personenbezogenen Daten zu verlangen, sie berichtigen oder löschen zu lassen,
+ihre Verarbeitung einschränken zu lassen, sie in einem übertragbaren Format zu
+erhalten und der Verarbeitung zu widersprechen. Du kannst dich außerdem bei der
+Datenschutz-Aufsichtsbehörde deines Wohn- oder Arbeitsortes beschweren.</p>
+<p>Praktisch gibt es hier nichts, wogegen sich diese Rechte richten könnten:
+RadPendler hält keine personenbezogenen Daten über dich auf irgendeinem Server,
+und das Wenige auf deinem Gerät wird mit der App gelöscht. Eine Anfrage
+bekommt genau diese Antwort, ehrlich und schriftlich.</p>
+
+<h2>Quelloffen</h2>
+<p>RadPendler steht unter der MIT-Lizenz. Wer nachsehen will, ob hier steht,
+was der Code tut, kann das tun.</p>
+
+<h2>Änderungen</h2>
+<p>Ändert sich diese Erklärung, erscheint die neue Fassung unter derselben
+Adresse mit neuem Datum.</p>
+
+<h2>Kontakt</h2>
+<p>Fragen: <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+
+<p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
+</body>
+</html>
