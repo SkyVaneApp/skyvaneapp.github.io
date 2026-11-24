@@ -12,5 +12,6 @@ for d in "$src"/*(/); do
   echo "→ https://skyvane.app/$name/"
 done
 cd "$root"
-git add -A docs && git commit -qm "Seiten aus ${1:t} $(date +%F)" && git push -q || echo "(nichts geändert)"
+git add -A docs
+if git diff --cached --quiet; then echo "(nichts geändert)"; else git commit -qm "Seiten aus ${1:t} $(date +%F)" && git push -q; fi
 echo "Pages braucht 1–2 min. Neue App? Kachel in docs/index.html ergänzen."
