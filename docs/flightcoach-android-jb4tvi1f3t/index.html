@@ -152,7 +152,7 @@ Video, data and flights stay on the phone.</p>
   fetch(S + "/count?app=flightcoach-android").then(r => r.ok ? r.json() : null).then(j => {
     if (!j || typeof j.downloads !== "number") return;
     const el = document.getElementById("count");
-    el.textContent = j.downloads.toLocaleString("de-DE") + " Downloads";
+    el.textContent = j.downloads.toLocaleString("de-DE") + (j.downloads === 1 ? " Download" : " Downloads");
     el.style.display = "block";
   }).catch(() => {});
 }

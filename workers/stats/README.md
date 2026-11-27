@@ -3,7 +3,12 @@
 Zählt Downloads der Test-APK und App-Starts (zufällige Kennung je Installation). Auswertung als Graph auf einer
 verborgenen Seite. Gespeichert: Zeit, Art, App, Kennung, Fassung — keine IP, kein Standort, keine Flugdaten.
 
-## Einrichten (einmal, im Cloudflare-Dashboard, Konto mit skyvane.app)
+## Stand
+
+Eingerichtet am 28.11.2026 über die API: D1 `skyvane-stats`, Worker `skyvane-stats`, Adresse `stats.skyvane.app`.
+Code ändern und neu hochladen geht nur mit einem neuen API-Token (Workers Scripts, D1, Workers Routes, DNS: Edit).
+
+## Einrichten von Hand (falls neu nötig, im Cloudflare-Dashboard, Konto mit skyvane.app)
 
 1. **D1 anlegen:** Workers & Pages → D1 → *Create* → Name `skyvane-stats` → Reiter *Console* → Inhalt von
    `schema.sql` einfügen → *Execute*.
