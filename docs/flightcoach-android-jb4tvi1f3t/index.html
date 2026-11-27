@@ -22,22 +22,36 @@
 <body>
 <img class="icon" src="icon.png" alt="FlightCoach">
 <h1>FlightCoach für Android</h1>
-<p class="dim">Testversion <span class="ver">0.2 (2)</span> · Stand <span class="date">27.11.2026</span> · <a href="#en">English</a></p>
+<p class="dim">Testversion <span class="ver">0.3 (3)</span> · Stand <span class="date">27.11.2026</span> · <a href="#en">English</a></p>
 
 <p>FlightCoach filmt und bewertet Landungen, Starts und Manöver aus dem Cockpit einer Motormaschine. Auf dem iPhone gibt
 es die App schon; die Android-Fassung entsteht gerade. Ihr Rechenkern ist derselbe wie auf dem iPhone und liefert für
 dieselben Daten dieselben Ergebnisse.</p>
-<p>Diese Testversion zeigt im Flug ein <strong>HUD wie auf dem iPhone</strong> (Fahrt, Höhe, Variometer, Lage, Kurs,
-Bahnvektor, Lastvielfaches), erkennt Starts, Landungen, Touch-and-go, Durchstarten, Steilkurven, Langsamflug und Stall
-und gibt nach dem Flug für jedes Manöver eine Note. Den Flug kannst du als GPX-Datei teilen. Kamerabild und Video
-kommen später. Gesucht sind Aufzeichnungen von möglichst vielen verschiedenen Telefonen.</p>
+<p>Diese Testversion zeigt im Flug ein <strong>HUD wie auf dem iPhone</strong> über dem Kamerabild (Fahrt, Höhe,
+Variometer, Lage, Kurs, Bahnvektor, Lastvielfaches), filmt den Flug, erkennt Starts, Landungen, Touch-and-go,
+Durchstarten, Steilkurven, Langsamflug und Stall und gibt nach dem Flug für jedes Manöver eine Note, mit dem Flugweg
+auf der Karte. Alle Flüge bleiben im <strong>Archiv</strong>. Drei Arten loszulegen:</p>
+<ul>
+  <li><strong>Flug</strong> — im Flugzeug, mit Video.</li>
+  <li><strong>Auto</strong> — Testfahrt: Fahrt, Kurs und Lage sind echt, die Höhe wird dazuerfunden (ab 50 km/h „steigt“
+    das Auto auf 1000 ft, unter 20 km/h „landet“ es). So lässt sich alles ohne Flugzeug ausprobieren.</li>
+  <li><strong>Sim</strong> — Simulator am nächsten Flugplatz: Telefon neigen und drehen wie ein Steuerhorn, Gas,
+    Klappen und Seitenruder unten; „AUTO“ fliegt Platzrunden von selbst. Mit kleiner Karte.</li>
+</ul>
+<p>Gesucht sind Aufzeichnungen von möglichst vielen verschiedenen Telefonen.</p>
 
-<a class="dl" href="flightcoach.apk" download>APK herunterladen · <span class="mb">3,2</span> MB</a>
+<a class="dl" href="flightcoach.apk" download>APK herunterladen · <span class="mb">4,5</span> MB</a>
 <p class="dim" style="text-align:center;margin-top:0">Android 10 oder neuer · Gyroskop und GPS nötig, Barometer empfohlen</p>
 
 <figure><img class="shot" src="2-hud-endanflug.jpg" alt="HUD im Endanflug"><figcaption>Im Endanflug: Fahrtband mit
 Vapp, Höhe über Grund, Variometer, Bahnvektor; unten die Manöverleiste, das laufende Manöver gelb.</figcaption></figure>
 <figure><img class="shot" src="3-hud-kurve.jpg" alt="HUD in der Kurve"><figcaption>In der Kurve mit 25° Querneigung.
+</figcaption></figure>
+<figure><img class="shot" src="6-sim.jpg" alt="Simulator"><figcaption>Simulator mit Autopilot in der Platzrunde,
+rechts oben die Karte, unten Gas, Klappen, Seitenruder, Knüppel, Tempo und Wetter.</figcaption></figure>
+<figure><img class="shot" src="7-karte.jpg" alt="Flugweg auf der Karte"><figcaption>Nach dem Flug: Flugweg auf der
+Karte (OpenStreetMap), Bahn in Cyan.</figcaption></figure>
+<figure><img class="shot" src="8-archiv.jpg" alt="Archiv"><figcaption>Archiv: jeder Flug mit Note, SIM/TEST und Video.
 </figcaption></figure>
 <div class="pair">
 <figure><img class="shot" src="4-auswertung.jpg" alt="Auswertung nach dem Flug"><figcaption>Nach dem Flug: Gesamtnote
@@ -46,8 +60,8 @@ und Überblick.</figcaption></figure>
 </div>
 <figure><img class="shot" src="1-start.jpg" alt="Startseite"><figcaption>Startseite. „Vorführung“ spielt einen
 erfundenen Flug ab: so siehst du alles, ohne zu fliegen.</figcaption></figure>
-<p class="dim" style="font-size:.85rem">Bilder aus der Vorführung (erfundener Flug an EDAZ). Im echten Flug steht
-dahinter noch kein Kamerabild, sondern Himmel und Boden.</p>
+<p class="dim" style="font-size:.85rem">HUD-Bilder aus Vorführung und Simulator. Im Flug und bei der Testfahrt
+liegt das HUD über dem Kamerabild.</p>
 
 <h2>Installieren</h2>
 <ol>
@@ -56,19 +70,22 @@ dahinter noch kein Kamerabild, sondern Himmel und Boden.</p>
     installieren: für den Browser erlauben, zurück, <strong>Installieren</strong>.</li>
   <li>Warnt Google Play Protect vor einer unbekannten App: <strong>Weitere Details → Trotzdem installieren</strong>.
     Die App kommt nicht aus dem Play Store, deshalb kennt Google sie nicht.</li>
-  <li>Beim ersten Start den <strong>Standort</strong> erlauben, „Genau“ und „Bei Nutzung der App“.</li>
+  <li>Beim ersten Start den <strong>Standort</strong> erlauben, „Genau“ und „Bei Nutzung der App“, und die
+    <strong>Kamera</strong> (für Bild und Video; ohne geht es auch, dann „Video“ ausschalten).</li>
 </ol>
 <p>Eine neue Testversion installierst du genauso, über die alte hinweg.</p>
 
 <h2>Benutzen</h2>
 <ol>
-  <li>Zum Kennenlernen: auf der Startseite <strong>Vorführung</strong> tippen.</li>
+  <li>Zum Zuschauen: <strong>Vorführung</strong> (ein erfundener Flug, oben rechts das Tempo). Zum Selbstfliegen:
+    oben <strong>Sim</strong> wählen und <strong>Simulator starten</strong>.</li>
   <li>Telefon quer und fest in die Halterung, <strong>Rückkamera nach vorn</strong> in Flugrichtung.</li>
-  <li><strong>Flug starten</strong> tippen. Stillhalten und oben rechts <strong>Eichen</strong> tippen, damit die App
+  <li><strong>Flug</strong> oder <strong>Auto</strong> wählen, starten. Stillhalten und oben rechts <strong>Eichen</strong> tippen, damit die App
     weiß, wie das Telefon eingebaut ist. Im Geradeausflug richtet <strong>Lage 0</strong> den Horizont nach.</li>
   <li>Fliegen (oder zum Ausprobieren: Auto fahren). Den Bildschirm dabei eingeschaltet lassen — diese Version
     zeichnet bei ausgeschaltetem Bildschirm noch nicht zuverlässig auf.</li>
-  <li>Danach oben links <strong>Ende</strong>. In der Auswertung oben rechts teilen und die GPX-Datei per Mail an
+  <li>Danach oben links <strong>Ende</strong>. Die Auswertung zeigt Noten, Karte und Video; der Flug liegt danach im
+    <strong>Archiv</strong>. Oben rechts teilen und die GPX-Datei per Mail an
     <a href="mailto:info@skyvane.app?subject=FlightCoach%20Android%20Test">info@skyvane.app</a> schicken.</li>
 </ol>
 <p>Hilfreich in der Mail: Telefonmodell, ob die angezeigte Fahrt zum Fahrtmesser bzw. Tacho passt, ob eine Rechtskurve
@@ -79,24 +96,28 @@ Rohwerte der Sensoren.</p>
 den Sensoren des Telefons und können falsch sein. Bediene die App nicht im Flug.</div>
 
 <h2>Daten</h2>
-<p>Die App braucht kein Konto und sendet nichts. Sie hat nicht einmal die Erlaubnis für den Internetzugang. Aufzeichnungen bleiben auf dem Telefon, bis du selbst eine
+<p>Die App braucht kein Konto und sendet nichts über dich. Ins Netz geht sie nur, um Kartenkacheln von OpenStreetMap
+zu laden (dabei sieht der Kartenserver deine IP-Adresse und den Kartenausschnitt). Video und Messwerte bleiben auf dem
+Telefon. Aufzeichnungen bleiben auf dem Telefon, bis du selbst eine
 GPX-Datei teilst. Was du per Mail schickst, dient nur dazu, die App zu verbessern. Verantwortlich: FlightCoach (Privatperson,
 Deutschland), info@skyvane.app.</p>
-<p class="dim" style="font-size:.85rem">Prüfsumme (SHA-256) der APK:<br><code><span class="sha">6720a7c7300c3a75e4f5066ab9430144207d2a496e2e234c82a1c95f79a0ee34</span></code></p>
+<p class="dim" style="font-size:.85rem">Prüfsumme (SHA-256) der APK:<br><code><span class="sha">7d8a1380255380fe14caddeab27516320c976a026e9924080377b0a72938267c</span></code></p>
 
 <h2 id="en">English</h2>
 <p>FlightCoach records and scores landings, take-offs and manoeuvres from the cockpit of a light aircraft. The iPhone app
 exists; the Android version is in progress and shares the same calculation core. This early test build is a
 <strong>early test build</strong>: an iPhone-style HUD in flight, automatic detection of take-offs, landings,
 touch-and-goes, go-arounds, steep turns, slow flight and stalls, and a score for each manoeuvre after the flight.
-Camera and video come later. Tap <em>Vorführung</em> on the start screen to watch a demo flight.</p>
+The HUD sits on the live camera image and the flight is filmed; every flight is kept in the archive with its track
+on a map. Modes: <em>Flug</em> (aircraft), <em>Auto</em> (test drive with invented altitude) and <em>Sim</em> (fly the
+simulator by tilting the phone, or let the autopilot fly circuits). <em>Vorführung</em> plays a demo flight.</p>
 <p><a href="flightcoach.apk" download><strong>Download the APK</strong></a> (Android 10+). Open the file, allow installing
 from your browser, and if Play Protect warns, choose <em>More details → Install anyway</em>. Allow precise location.</p>
 <p>Mount the phone landscape with the rear camera facing forward, tap <strong>Flug starten</strong>, hold still and
 tap <strong>Eichen</strong> (calibrate mount), fly or drive with the screen on, then <strong>Ende</strong> and share the
 GPX from the summary. Please email the file with your phone model and any problems to
 <a href="mailto:info@skyvane.app?subject=FlightCoach%20Android%20Test">info@skyvane.app</a>. The app is German-only for now.
-Not a flight instrument. No account, nothing is sent unless you share it.</p>
+Not a flight instrument. No account; only map tiles are loaded from OpenStreetMap, video and data stay on the phone.</p>
 
 <p class="dim">© AK</p>
 <p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
