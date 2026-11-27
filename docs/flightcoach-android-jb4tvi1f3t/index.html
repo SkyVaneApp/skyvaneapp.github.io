@@ -22,7 +22,7 @@
 <body>
 <img class="icon" src="icon.png" alt="FlightCoach">
 <h1>FlightCoach für Android</h1>
-<p class="dim">Testversion <span class="ver">0.4 (4)</span> · Stand <span class="date">27.11.2026</span> · <a href="#en">English</a></p>
+<p class="dim">Testversion <span class="ver">0.5 (5)</span> · Stand <span class="date">27.11.2026</span> · <a href="#en">English</a></p>
 
 <p>FlightCoach filmt und bewertet Landungen, Starts und Manöver aus dem Cockpit einer Motormaschine. Auf dem iPhone gibt
 es die App schon; die Android-Fassung entsteht gerade. Ihr Rechenkern ist derselbe wie auf dem iPhone und liefert für
@@ -31,7 +31,9 @@ dieselben Daten dieselben Ergebnisse.</p>
 Variometer, Lage, Kurs, Bahnvektor, Lastvielfaches), filmt den Flug, erkennt Starts, Landungen, Touch-and-go,
 Durchstarten, Steilkurven, Langsamflug und Stall und gibt nach dem Flug für jedes Manöver eine Note, mit dem Flugweg
 auf der Karte und allen Kennzahlen je Manöver: Gleitpfad, Mittellinie, Fahrt, Aufsetzpunkt, Sinkrate und Aufsetzstoß,
-Roll- und Startstrecke. Alle Flüge bleiben im <strong>Archiv</strong>, mit Flugzeug und Kennzeichen. Geht der Bildschirm
+Roll- und Startstrecke. Jedes Manöver lässt sich als <strong>Video mit HUD</strong> wiedergeben, mit Mittellinie und
+Schwelle im Bild. Alle Flüge bleiben im <strong>Archiv</strong>, mit Flugzeug und Kennzeichen; Austausch mit der
+iPhone-App über <code>.flightcoach</code>-Dateien, Import von GPX und FIT, Garmin-Log für FlySto. Geht der Bildschirm
 aus, zeichnet die App weiter (Hinweis in der Statusleiste). Drei Arten loszulegen:</p>
 <ul>
   <li><strong>Flug</strong> — im Flugzeug, mit Video.</li>
@@ -43,7 +45,7 @@ aus, zeichnet die App weiter (Hinweis in der Statusleiste). Drei Arten loszulege
 <p>„Weitersagen“ auf der Startseite schickt den Link zu dieser Seite. Gesucht sind Aufzeichnungen von möglichst vielen
 verschiedenen Telefonen.</p>
 
-<a class="dl" href="flightcoach.apk" download>APK herunterladen · <span class="mb">4,9</span> MB</a>
+<a class="dl" href="flightcoach.apk" download>APK herunterladen · <span class="mb">5,4</span> MB</a>
 <p class="dim" style="text-align:center;margin-top:0">Android 10 oder neuer · Gyroskop und GPS nötig, Barometer empfohlen</p>
 
 <figure><img class="shot" src="2-hud-endanflug.jpg" alt="HUD im Endanflug"><figcaption>Im Endanflug: Fahrtband mit
@@ -51,7 +53,9 @@ Vapp, Höhe über Grund, Variometer, Bahnvektor; unten die Manöverleiste, das l
 <figure><img class="shot" src="3-hud-kurve.jpg" alt="HUD in der Kurve"><figcaption>In der Kurve mit 25° Querneigung.
 </figcaption></figure>
 <figure><img class="shot" src="6-sim.jpg" alt="Simulator"><figcaption>Simulator mit Autopilot in der Platzrunde,
-rechts oben die Karte, unten Gas, Klappen, Seitenruder, Knüppel, Tempo und Wetter.</figcaption></figure>
+Bahn und Windsack im Bild, rechts oben die Karte, unten Gas, Klappen, Seitenruder, Knüppel, Tempo, Wetter und Motorton.</figcaption></figure>
+<figure><img class="shot" src="11-wiedergabe.jpg" alt="Wiedergabe mit HUD"><figcaption>Wiedergabe eines Manövers:
+HUD, Schwelle und Mittellinie im Bild, Gleitpfad- und Mittellinien-Skala, Ablage „3 m L“.</figcaption></figure>
 <figure><img class="shot" src="7-karte.jpg" alt="Flugweg auf der Karte"><figcaption>Nach dem Flug: Flugweg auf der
 Karte (OpenStreetMap), Bahn in Cyan.</figcaption></figure>
 <figure><img class="shot" src="8-archiv.jpg" alt="Archiv"><figcaption>Archiv: jeder Flug mit Note, SIM/TEST und Video.
@@ -91,7 +95,9 @@ liegt das HUD über dem Kamerabild.</p>
   <li>Telefon quer und fest in die Halterung, <strong>Rückkamera nach vorn</strong> in Flugrichtung.</li>
   <li>Unten auf das Flugzeug tippen: Muster wählen, <strong>Kennzeichen</strong> und Geschwindigkeiten eintragen
     (Vorgaben wie in der iPhone-App).</li>
-  <li><strong>Flug</strong> oder <strong>Auto</strong> wählen, starten. Stillhalten und oben rechts <strong>Eichen</strong> tippen, damit die App
+  <li><strong>Flug</strong> oder <strong>Auto</strong> wählen, starten. Die Aufzeichnung beginnt von selbst beim Rollen
+    (oder mit „Starten“); nach der Landung fragt die App, ob der Flug zu Ende ist. Für die Drehzahl aus dem
+    Motorgeräusch das Mikrofon erlauben. Stillhalten und oben rechts <strong>Eichen</strong> tippen, damit die App
     weiß, wie das Telefon eingebaut ist. Im Geradeausflug richtet <strong>Lage 0</strong> den Horizont nach.</li>
   <li>Fliegen (oder zum Ausprobieren: Auto fahren). Der Bildschirm bleibt an; geht er doch aus, laufen Sensoren, GPS und
     Video weiter. Mitteilungen für FlightCoach erlauben, dann steht die laufende Aufzeichnung in der Statusleiste.</li>
@@ -112,7 +118,7 @@ zu laden (dabei sieht der Kartenserver deine IP-Adresse und den Kartenausschnitt
 Telefon. Aufzeichnungen bleiben auf dem Telefon, bis du selbst eine
 GPX-Datei teilst. Was du per Mail schickst, dient nur dazu, die App zu verbessern. Verantwortlich: FlightCoach (Privatperson,
 Deutschland), info@skyvane.app.</p>
-<p class="dim" style="font-size:.85rem">Prüfsumme (SHA-256) der APK:<br><code><span class="sha">3f0fad99dbb1c70bf935b3bd7b7768039ced1042546e0894e396ca2a420ca999</span></code></p>
+<p class="dim" style="font-size:.85rem">Prüfsumme (SHA-256) der APK:<br><code><span class="sha">abc789c8728b16e7ae6c776f37da2dba156010b584d017a2d075badd1bf0474b</span></code></p>
 
 <h2 id="en">English</h2>
 <p>FlightCoach records and scores landings, take-offs and manoeuvres from the cockpit of a light aircraft. The iPhone app
