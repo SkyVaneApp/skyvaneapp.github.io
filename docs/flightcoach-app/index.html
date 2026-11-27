@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlightCoach — Landungen filmen und auswerten</title>
+<title>FlightCoach — Landungen filmen und auswerten · iPhone, iPad, Android</title>
 <style>
   :root { --ink:#13203a; --dim:#5d6678; --bg:#f6f4ef; --line:#dcd8cf; --accent:#1f5fae; }
   @media (prefers-color-scheme: dark) { :root { --ink:#e8e6e1; --dim:#9aa3b2; --bg:#0d1220; --line:#252c3c; --accent:#6aa8ff; } }
@@ -14,22 +14,51 @@
 <body>
 <img class="icon" src="icon.png" alt="FlightCoach">
 <h1>FlightCoach</h1>
-<p class="dim">Landungen, Starts und Manöver aus dem Cockpit filmen und auswerten · iPhone und iPad · <a href="#en">English</a></p>
-<p>Das iPhone quer in der Halterung, Kamera nach vorn: FlightCoach zeigt ein HUD im Stil moderner Glascockpits
-(Fahrt, Höhe, Variometer, Lage, Kurs, Drehzahl, METAR) und erkennt Starts, Landungen, Durchstarten, Steilkurven
-und Airwork selbst. Nach dem Flug gibt es für jede Landung einen Score aus Gleitwinkel, Mittellinie, Fahrt und
-Aufsetzimpuls, das Video mit HUD, Karte, 3D-Ansicht und GPX-Export für FlySto, CloudAhoy und cloudlog.aero.</p>
+<p class="dim">Landungen, Starts und Manöver aus dem Cockpit filmen und auswerten · iPhone und iPad, Android in Vorbereitung ·
+<a href="#en">English</a></p>
+<p>Das Telefon quer in der Halterung, Kamera nach vorn: FlightCoach zeigt ein HUD im Stil moderner Glascockpits
+(Fahrt, Höhe, Variometer, Lage, Kurs, Drehzahl, METAR) und erkennt Starts, Landungen, Touch-and-go, Durchstarten,
+Steilkurven, Umkehrkurven, Langsamflug, Stall und Airwork selbst. Nach dem Flug gibt es für jedes Manöver eine Note,
+für jede Landung aus Gleitwinkel, Mittellinie, Fahrt und Aufsetzimpuls, dazu das Video mit HUD, Karte, 3D-Ansicht und
+Export als GPX und Garmin-Log für FlySto, CloudAhoy und cloudlog.aero. Im Simulator lässt sich alles ohne Flugzeug üben,
+eine Testfahrt im Auto probiert die Erkennung aus.</p>
 <p><strong>Kein Fluginstrument.</strong> FlightCoach dient der Nachbesprechung. Alle Werte stammen aus den Sensoren des
 Telefons und können falsch sein.</p>
+
+<h2>iPhone, iPad und Android</h2>
+<table>
+<tr><th></th><th>iPhone und iPad</th><th>Android</th></tr>
+<tr><td>Bezug</td><td><a href="https://apps.apple.com/app/id6829454417">App Store</a></td><td>in Vorbereitung</td></tr>
+<tr><td>Voraussetzung</td><td>iOS 18 oder neuer</td><td>Android 10 oder neuer, Gyroskop und GPS; Barometer empfohlen</td></tr>
+<tr><td>Auswertung</td><td colspan="2">derselbe Rechenkern auf beiden: gleiche Daten ergeben dieselben Manöver, Kennzahlen und Noten</td></tr>
+<tr><td>Flüge auf mehreren Geräten</td><td>über die eigene iCloud</td><td>auf dem Gerät; weitergeben als Datei</td></tr>
+<tr><td>Karte</td><td>Apple Karten mit 3D-Gelände</td><td>OpenStreetMap</td></tr>
+</table>
+<p>Ein Flug lässt sich als <strong>Flugdatei</strong> (<code>.flightcoach</code>) zwischen beiden austauschen: alle
+Messwerte (Ort, Höhe, Fahrt, Lage, Lastvielfaches, Luftdruck, Drehzahl, Klappen), die erkannten Manöver mit ihren
+Kennzahlen und das Flugzeug mit seinen Geschwindigkeiten — mehr als GPX oder FIT tragen. Videos bleiben auf dem Gerät,
+auf dem sie aufgenommen wurden. Auf dem iPhone ab Version 1.4: Flug öffnen → Teilen → „Flugdatei ohne Videos“; einlesen über
+„+ Import“ im Flugarchiv oder „Öffnen in FlightCoach“. Die Android-Fassung bekommt Funktionen in derselben Reihenfolge
+wie die iPhone-App sie hat, das Wichtigste zuerst.</p>
+
 <h2 id="support">Support</h2>
 <p>Fragen, Fehler, Ideen: <a href="mailto:info@skyvane.app?subject=FlightCoach">info@skyvane.app</a>
-— oder in der App unter Einstellungen → Feedback senden.</p>
-<p><a href="https://skyvane.app/flightcoach-privacy/">Datenschutzerklärung</a></p>
+— oder in der App unter Einstellungen → Feedback senden. Bitte dazuschreiben, ob iPhone, iPad oder Android und welches
+Gerät.</p>
+<p><a href="https://skyvane.app/flightcoach-privacy/">Datenschutzerklärung</a> (gilt für alle Fassungen)</p>
+
 <h2 id="en">English</h2>
-<p>Mount your iPhone landscape with the camera facing forward: FlightCoach shows a glass-cockpit style HUD and
-detects take-offs, landings, go-arounds, steep turns and airwork. Each landing gets a score from glide angle,
-centreline, speed and touchdown impulse; replay the video with HUD, see the flight on a map and in 3D, export GPX.
-Not a flight instrument. Support: <a href="mailto:info@skyvane.app?subject=FlightCoach">info@skyvane.app</a>.</p>
+<p>Mount your phone landscape with the camera facing forward: FlightCoach shows a glass-cockpit style HUD and detects
+take-offs, landings, touch-and-gos, go-arounds, steep turns, turn reversals, slow flight, stalls and airwork. Every
+manoeuvre gets a score — each landing from glide angle, centreline, speed and touchdown impulse; replay the video with
+HUD, see the flight on a map and in 3D, export GPX and a Garmin log for FlySto, CloudAhoy and cloudlog.aero. Practise
+without an aircraft in the simulator. Not a flight instrument.</p>
+<p><strong>iPhone and iPad</strong> on the <a href="https://apps.apple.com/app/id6829454417">App Store</a> (iOS 18+);
+<strong>Android</strong> in preparation (Android 10+, gyroscope and GPS). Both use the same analysis core. A flight can be
+moved between them as a <code>.flightcoach</code> file with every measurement, the detected manoeuvres and the aircraft;
+videos stay on the device that recorded them. On iPhone flights sync through your own iCloud, on Android they stay on
+the device. Support: <a href="mailto:info@skyvane.app?subject=FlightCoach">info@skyvane.app</a> — please mention your
+device. <a href="https://skyvane.app/flightcoach-privacy/#en">Privacy policy</a> (all versions).</p>
 <p class="dim">© AK</p>
 <p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
 </body>

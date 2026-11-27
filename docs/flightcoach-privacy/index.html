@@ -14,39 +14,71 @@
 <body>
 <p><a href="https://skyvane.app/flightcoach-app/">← FlightCoach</a></p>
 <h1>Datenschutzerklärung — FlightCoach</h1>
-<p class="dim">Stand: Version 1.0, November 2026 · <a href="#en">English below</a></p>
+<p class="dim">Stand: November 2026 · gilt für iPhone, iPad und Android · <a href="#en">English below</a></p>
 <p>Verantwortlich: FlightCoach (Privatperson, Deutschland), <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
 <p>FlightCoach kommt ohne personenbezogene Daten beim Entwickler aus: kein Konto, keine Anmeldung, keine Analytik,
-keine Werbung, kein Server dieses Projekts.</p>
+keine Werbung, kein Server dieses Projekts. Das gilt für alle Fassungen.</p>
+
 <h2>Was auf dem Gerät bleibt</h2>
 <table>
 <tr><th>Daten</th><th>Wozu</th><th>Wo</th></tr>
-<tr><td>Standort (GPS)</td><td>Geschwindigkeit, Kurs, Flugweg, Flugplatz und Lage zur Bahn</td><td>Gerät und deine private iCloud</td></tr>
-<tr><td>Kamera und Mikrofon</td><td>Video rund um Starts, Landungen und Manöver; Drehzahl aus dem Motorgeräusch</td><td>Gerät und, wenn eingeschaltet, deine private iCloud</td></tr>
-<tr><td>Bewegungssensoren und Barometer</td><td>Lage, Höhe, Steigrate, Aufsetzstoß</td><td>Gerät und deine private iCloud</td></tr>
+<tr><td>Standort (GPS)</td><td>Geschwindigkeit, Kurs, Flugweg, Flugplatz und Lage zur Bahn</td><td rowspan="3">iPhone/iPad: Gerät und, wenn eingeschaltet, deine private iCloud<br>Android: nur im Speicherbereich der App auf dem Gerät</td></tr>
+<tr><td>Kamera und Mikrofon</td><td>Video rund um Starts, Landungen und Manöver; Drehzahl aus dem Motorgeräusch</td></tr>
+<tr><td>Bewegungssensoren und Barometer</td><td>Lage, Höhe, Steigrate, Aufsetzstoß</td></tr>
 </table>
-<p>Die iCloud-Ablage ist die private CloudKit-Datenbank deines Apple-Kontos. Der Entwickler kann sie nicht einsehen.
-Du kannst sie in den Einstellungen der App abschalten und Flüge jederzeit löschen.</p>
+<p><strong>iPhone und iPad:</strong> Die iCloud-Ablage ist die private CloudKit-Datenbank deines Apple-Kontos, dazu für
+Flugzeuge und Einstellungen der iCloud-Schlüssel-Wert-Speicher. Der Entwickler kann beides nicht einsehen. Du kannst
+iCloud in den Einstellungen der App abschalten und Flüge jederzeit löschen.</p>
+<p><strong>Android:</strong> Die Flüge liegen im privaten Speicherbereich der App. FlightCoach legt keine Sicherung in einer
+Cloud an, auch nicht über die automatische Sicherung von Android. Wird die App gelöscht, sind die Flüge weg — vorher als
+Flugdatei sichern. Während der Aufzeichnung zeigt Android eine Mitteilung, weil die App Standort, Kamera und Mikrofon
+auch bei ausgeschaltetem Bildschirm nutzt; Mitteilungen dienen nur dazu.</p>
+
+<h2>Dateien, die du weitergibst</h2>
+<p>Exportierst du einen Flug (Flugdatei <code>.flightcoach</code>, GPX, Garmin-Log, Video), entsteht eine Datei mit
+Ort, Zeit, Flugweg und Messwerten, auf Wunsch mit Videos. Sie verlässt das Gerät nur, wenn du sie selbst teilst oder in
+einen Ordner legst (z. B. den FlySto-Ordner); was der Empfänger damit tut, liegt dann bei ihm. Eine Flugdatei enthält
+auch das Flugzeug mit Kennzeichen.</p>
+
 <h2>Dienste, die die App fragt</h2>
 <table>
-<tr><th>Dienst</th><th>Wozu</th><th>Was er erfährt</th></tr>
-<tr><td>aviationweather.gov (NOAA)</td><td>METAR des nächsten Flugplatzes: Wind, QNH, Temperatur</td><td>Ein Ausschnitt von etwa 120 km um deinen Standort, deine IP-Adresse</td></tr>
-<tr><td>Open-Meteo (open-meteo.com)</td><td>Geländehöhen für die 3D-Ansicht</td><td>Ein Raster von 100 Punkten um den Flugweg, deine IP-Adresse</td></tr>
-<tr><td>Apple Karten</td><td>Kartenbilder in der Kartenansicht</td><td>Nach den Bedingungen von Apple</td></tr>
+<tr><th>Dienst</th><th>Wozu</th><th>Was er erfährt</th><th>Fassung</th></tr>
+<tr><td>aviationweather.gov (NOAA)</td><td>METAR des nächsten Flugplatzes: Wind, QNH, Temperatur</td><td>Ein Ausschnitt von etwa 120 km um deinen Standort, deine IP-Adresse</td><td>alle</td></tr>
+<tr><td>Open-Meteo (open-meteo.com)</td><td>Geländehöhen für die 3D-Ansicht</td><td>Ein Raster von 100 Punkten um den Flugweg, deine IP-Adresse</td><td>iPhone/iPad</td></tr>
+<tr><td>Apple Karten</td><td>Kartenbilder, Satellitenbilder und 3D-Gelände</td><td>Nach den Bedingungen von Apple</td><td>iPhone/iPad</td></tr>
+<tr><td>OpenStreetMap (tile.openstreetmap.org)</td><td>Kartenbilder in der Kartenansicht</td><td>Die gezeigten Kartenkacheln (also das Gebiet), deine IP-Adresse, Name und Version der App; nach den Regeln der OpenStreetMap Foundation</td><td>Android</td></tr>
 </table>
 <p>Keine dieser Anfragen trägt eine Kennung oder ist mit einem Konto verknüpft. Weil dabei Koordinaten das Gerät
 verlassen, steht im App Store unter „App-Datenschutz“: <em>Genauer Standort — App-Funktionalität, nicht mit dir
-verknüpft, kein Tracking</em>.</p>
+verknüpft, kein Tracking</em>; im Google Play Store (sobald die Android-Fassung dort erscheint) entsprechend unter
+„Datensicherheit“: <em>Genauer Standort — App-Funktionalität, nicht weitergegeben, verschlüsselt übertragen</em>.</p>
+<p>Die Lufträume, Meldepunkte und Bahnschwellen stammen von open flightmaps und sind in der App enthalten; dafür
+wird nichts abgefragt.</p>
+
 <h2>Feedback</h2>
-<p>„Feedback senden“ öffnet eine Mail an die oben genannte Adresse. Technische Angaben (Version, Gerät, iOS, Zahl der
-Flüge) hängt die App nur an, wenn du es willst — nie Orte oder Flugwege.</p>
+<p>„Feedback senden“ öffnet eine Mail an die oben genannte Adresse. Technische Angaben (Version, Gerät, Betriebssystem,
+Zahl der Flüge) hängt die App nur an, wenn du es willst — nie Orte oder Flugwege.</p>
+
+<h2>Deine Rechte</h2>
+<p>Weil beim Entwickler keine Daten über dich liegen, gibt es dort nichts auszukunften oder zu löschen. Deine Flüge
+löschst du in der App (einzeln oder je Monat/Jahr, auf dem Gerät und in iCloud). Fragen: <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+
 <h2 id="en">English</h2>
-<p>FlightCoach has no account, no analytics and no server of its own. Location, camera, microphone and motion data stay
-on your device and in your private iCloud (CloudKit), which the developer cannot access. The app asks
-aviationweather.gov for the nearest METAR (an area of about 120 km around you) and Open-Meteo for terrain heights
-(points around your flight path); neither request carries an identifier. Because coordinates leave the device, the
-App Store privacy label lists <em>Precise Location — App Functionality, not linked to you, no tracking</em>. Contact:
-<a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
+<p>This policy covers FlightCoach on iPhone, iPad and Android. FlightCoach has no account, no analytics, no ads and no
+server of its own. Location, camera, microphone and motion data stay on your device. On iPhone and iPad they are also
+stored in your private iCloud (CloudKit and iCloud key-value storage), which the developer cannot access and which you
+can switch off. On Android flights stay in the app's private storage; FlightCoach makes no cloud backup (Android auto
+backup is off), so export a flight file before uninstalling. While recording, Android shows a notification because the
+app uses location, camera and microphone with the screen off.</p>
+<p>Exported files (<code>.flightcoach</code>, GPX, Garmin log, video) contain time, position, flight path and
+measurements, a flight file also the aircraft and its registration; they leave your device only when you share them.</p>
+<p>The app asks aviationweather.gov for the nearest METAR (an area of about 120 km around you; all versions). On iPhone
+and iPad it asks Open-Meteo for terrain heights around your flight path and Apple Maps for map and satellite imagery; on
+Android it loads map tiles from OpenStreetMap (tile.openstreetmap.org: the map area shown, your IP address, app name
+and version). No request carries an identifier. Because coordinates leave the device, the App Store privacy label lists
+<em>Precise Location — App Functionality, not linked to you, no tracking</em>, and the Google Play data safety section
+(once the Android version is listed there) <em>Precise location — app functionality, not shared, encrypted in transit</em>. Feedback mails include technical
+details only if you choose to, never locations. Contact: <a href="mailto:info@skyvane.app">info@skyvane.app</a>.</p>
 <p class="dim">© AK</p>
 <p class="skyvane" style="margin-top:3em;font-size:.85rem;opacity:.7"><a href="https://skyvane.app/">SkyVane</a> · Apps für Himmel und Unterwegs · <a href="mailto:info@skyvane.app">info@skyvane.app</a></p>
 </body>
