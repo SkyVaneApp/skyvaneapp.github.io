@@ -12,6 +12,9 @@
   img.shot { width: 100%; border-radius: 12px; border: 1px solid var(--line); margin: .5em 0; }
   .dl { display: block; text-align: center; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
         font-size: 1.1rem; padding: 14px 18px; border-radius: 14px; margin: 1.2em 0 .4em; }
+  figure { margin: 1em 0; } figcaption { color: var(--dim); font-size: .9rem; margin-top: .3em; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pair img.shot { margin: 0; }
   .note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
   ol li, ul li { margin: .3em 0; } code { font-size: .85em; word-break: break-all; }
 </style>
@@ -19,19 +22,32 @@
 <body>
 <img class="icon" src="icon.png" alt="FlightCoach">
 <h1>FlightCoach für Android</h1>
-<p class="dim">Testversion <span class="ver">0.1 (1)</span> · Stand <span class="date">27.11.2026</span> · <a href="#en">English</a></p>
+<p class="dim">Testversion <span class="ver">0.2 (2)</span> · Stand <span class="date">27.11.2026</span> · <a href="#en">English</a></p>
 
 <p>FlightCoach filmt und bewertet Landungen, Starts und Manöver aus dem Cockpit einer Motormaschine. Auf dem iPhone gibt
 es die App schon; die Android-Fassung entsteht gerade. Ihr Rechenkern ist derselbe wie auf dem iPhone und liefert für
 dieselben Daten dieselben Ergebnisse.</p>
-<p>Diese frühe Testversion ist eine <strong>Sensorprobe</strong>. Sie zeigt, was die Sensoren deines Telefons liefern
-(Lage, Barometer, GPS), erkennt Manöver und schreibt den Flug als GPX-Datei. HUD, Video und Landebewertung kommen
-später. Gesucht sind Aufzeichnungen von möglichst vielen verschiedenen Telefonen.</p>
+<p>Diese Testversion zeigt im Flug ein <strong>HUD wie auf dem iPhone</strong> (Fahrt, Höhe, Variometer, Lage, Kurs,
+Bahnvektor, Lastvielfaches), erkennt Starts, Landungen, Touch-and-go, Durchstarten, Steilkurven, Langsamflug und Stall
+und gibt nach dem Flug für jedes Manöver eine Note. Den Flug kannst du als GPX-Datei teilen. Kamerabild und Video
+kommen später. Gesucht sind Aufzeichnungen von möglichst vielen verschiedenen Telefonen.</p>
 
-<a class="dl" href="flightcoach.apk" download>APK herunterladen · <span class="mb">2,9</span> MB</a>
+<a class="dl" href="flightcoach.apk" download>APK herunterladen · <span class="mb">3,2</span> MB</a>
 <p class="dim" style="text-align:center;margin-top:0">Android 10 oder neuer · Gyroskop und GPS nötig, Barometer empfohlen</p>
 
-<img class="shot" src="sensorprobe.jpg" alt="Sensorprobe während einer Aufzeichnung">
+<figure><img class="shot" src="2-hud-endanflug.jpg" alt="HUD im Endanflug"><figcaption>Im Endanflug: Fahrtband mit
+Vapp, Höhe über Grund, Variometer, Bahnvektor; unten die Manöverleiste, das laufende Manöver gelb.</figcaption></figure>
+<figure><img class="shot" src="3-hud-kurve.jpg" alt="HUD in der Kurve"><figcaption>In der Kurve mit 25° Querneigung.
+</figcaption></figure>
+<div class="pair">
+<figure><img class="shot" src="4-auswertung.jpg" alt="Auswertung nach dem Flug"><figcaption>Nach dem Flug: Gesamtnote
+und Überblick.</figcaption></figure>
+<figure><img class="shot" src="5-manoever.jpg" alt="Manöver mit Noten"><figcaption>Jedes Manöver mit Note.</figcaption></figure>
+</div>
+<figure><img class="shot" src="1-start.jpg" alt="Startseite"><figcaption>Startseite. „Vorführung“ spielt einen
+erfundenen Flug ab: so siehst du alles, ohne zu fliegen.</figcaption></figure>
+<p class="dim" style="font-size:.85rem">Bilder aus der Vorführung (erfundener Flug an EDAZ). Im echten Flug steht
+dahinter noch kein Kamerabild, sondern Himmel und Boden.</p>
 
 <h2>Installieren</h2>
 <ol>
@@ -46,16 +62,18 @@ später. Gesucht sind Aufzeichnungen von möglichst vielen verschiedenen Telefon
 
 <h2>Benutzen</h2>
 <ol>
-  <li>Telefon fest in die Halterung, <strong>Rückkamera nach vorn</strong> in Flugrichtung.</li>
-  <li><strong>Start</strong> tippen. Die Kacheln oben zeigen Werte, sobald Lage, Barometer und GPS Werte liefern.</li>
-  <li>Stillhalten und <strong>Halterung nullen</strong> tippen, damit die App weiß, wie das Telefon eingebaut ist.</li>
+  <li>Zum Kennenlernen: auf der Startseite <strong>Vorführung</strong> tippen.</li>
+  <li>Telefon quer und fest in die Halterung, <strong>Rückkamera nach vorn</strong> in Flugrichtung.</li>
+  <li><strong>Flug starten</strong> tippen. Stillhalten und oben rechts <strong>Eichen</strong> tippen, damit die App
+    weiß, wie das Telefon eingebaut ist. Im Geradeausflug richtet <strong>Lage 0</strong> den Horizont nach.</li>
   <li>Fliegen (oder zum Ausprobieren: Auto fahren). Den Bildschirm dabei eingeschaltet lassen — diese Version
     zeichnet bei ausgeschaltetem Bildschirm noch nicht zuverlässig auf.</li>
-  <li>Danach <strong>Stopp</strong> und <strong>GPX teilen</strong>. Die Datei per Mail an
+  <li>Danach oben links <strong>Ende</strong>. In der Auswertung oben rechts teilen und die GPX-Datei per Mail an
     <a href="mailto:info@skyvane.app?subject=FlightCoach%20Android%20Test">info@skyvane.app</a> schicken.</li>
 </ol>
 <p>Hilfreich in der Mail: Telefonmodell, ob die angezeigte Fahrt zum Fahrtmesser bzw. Tacho passt, ob eine Rechtskurve
-als positive Querneigung (ROLL) erscheint, und was nicht funktioniert hat.</p>
+nach rechts angezeigt wird („QUER … R“), und was nicht funktioniert hat. „Sensoren“ auf der Startseite zeigt die
+Rohwerte der Sensoren.</p>
 
 <div class="note"><strong>Kein Fluginstrument.</strong> FlightCoach dient der Nachbesprechung. Alle Werte stammen aus
 den Sensoren des Telefons und können falsch sein. Bediene die App nicht im Flug.</div>
@@ -64,18 +82,19 @@ den Sensoren des Telefons und können falsch sein. Bediene die App nicht im Flug
 <p>Die App braucht kein Konto und sendet nichts. Sie hat nicht einmal die Erlaubnis für den Internetzugang. Aufzeichnungen bleiben auf dem Telefon, bis du selbst eine
 GPX-Datei teilst. Was du per Mail schickst, dient nur dazu, die App zu verbessern. Verantwortlich: FlightCoach (Privatperson,
 Deutschland), info@skyvane.app.</p>
-<p class="dim" style="font-size:.85rem">Prüfsumme (SHA-256) der APK:<br><code><span class="sha">62eeb3bbb1da791d741ebed378f4257228e0efc7c5a337444bd11396e6845cdd</span></code></p>
+<p class="dim" style="font-size:.85rem">Prüfsumme (SHA-256) der APK:<br><code><span class="sha">6720a7c7300c3a75e4f5066ab9430144207d2a496e2e234c82a1c95f79a0ee34</span></code></p>
 
 <h2 id="en">English</h2>
 <p>FlightCoach records and scores landings, take-offs and manoeuvres from the cockpit of a light aircraft. The iPhone app
 exists; the Android version is in progress and shares the same calculation core. This early test build is a
-<strong>sensor probe</strong>: it shows what your phone's sensors deliver (attitude, barometer, GPS), detects manoeuvres
-and saves the flight as GPX. HUD, video and landing scores come later.</p>
+<strong>early test build</strong>: an iPhone-style HUD in flight, automatic detection of take-offs, landings,
+touch-and-goes, go-arounds, steep turns, slow flight and stalls, and a score for each manoeuvre after the flight.
+Camera and video come later. Tap <em>Vorführung</em> on the start screen to watch a demo flight.</p>
 <p><a href="flightcoach.apk" download><strong>Download the APK</strong></a> (Android 10+). Open the file, allow installing
 from your browser, and if Play Protect warns, choose <em>More details → Install anyway</em>. Allow precise location.</p>
-<p>Mount the phone with the rear camera facing forward, tap <strong>Start</strong>, hold still and tap
-<strong>Halterung nullen</strong> (zero mount), fly or drive with the screen on, then <strong>Stopp</strong> and
-<strong>GPX teilen</strong> (share GPX). Please email the file with your phone model and any problems to
+<p>Mount the phone landscape with the rear camera facing forward, tap <strong>Flug starten</strong>, hold still and
+tap <strong>Eichen</strong> (calibrate mount), fly or drive with the screen on, then <strong>Ende</strong> and share the
+GPX from the summary. Please email the file with your phone model and any problems to
 <a href="mailto:info@skyvane.app?subject=FlightCoach%20Android%20Test">info@skyvane.app</a>. The app is German-only for now.
 Not a flight instrument. No account, nothing is sent unless you share it.</p>
 
